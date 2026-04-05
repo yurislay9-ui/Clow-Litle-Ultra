@@ -1,0 +1,31 @@
+{
+  "intents": [
+    {
+      "name": "greet",
+      "description": "Handles simple greetings from the user.",
+      "triggers": {
+        "keywords": ["hello", "hi", "hey", "greetings"]
+      },
+      "handler": {
+        "type": "inline",
+        "details": {
+          "response": "Hello! I am CLAW Lite Ultra Pro. How can I be of service?"
+        }
+      }
+    },
+    {
+      "name": "system_status",
+      "description": "Provides the current operational status of the system.",
+      "triggers": {
+        "keywords": ["status", "system status", "health check"]
+      },
+      "handler": {
+        "type": "tool",
+        "details": {
+          "name": "health_checker",
+          "function": "get_system_health"
+        }
+      }
+    }
+  ]
+}

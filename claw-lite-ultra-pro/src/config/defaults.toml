@@ -1,0 +1,19 @@
+# Default configuration for CLAW Lite Ultra Pro
+
+[intents]
+# Path to the JSON file that defines the application's intents.
+registry_path = "config/intents_registry.json"
+
+[logging]
+# Logging level (DEBUG, INFO, WARNING, ERROR, CRITICAL)
+level = "INFO"
+# Format for log messages.
+format = "%(asctime)s - [%(levelname)s] - %(name)s: %(message)s"
+
+[channels.terminal]
+# The prompt to display for user input.
+user_prompt = "[USER]: "
+# The prompt to display for the assistant's response.
+assistant_prompt = "[ASSISTANT]: "
+# The welcome message to display when the CLI starts.
+welcome_message = "Welcome to CLAW Lite Ultra Pro. I am ready. Type your commands below."
