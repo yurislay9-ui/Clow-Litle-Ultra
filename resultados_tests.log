@@ -1,0 +1,1342 @@
+============================= test session starts ==============================
+platform android -- Python 3.13.12, pytest-9.0.2, pluggy-1.6.0 -- /data/data/com.termux/files/usr/bin/python
+cachedir: .pytest_cache
+rootdir: /root/claw-lite-ultra-pro
+configfile: pyproject.toml
+plugins: anyio-4.12.1
+collecting ... collected 354 items
+
+tests/integration/test_integration.py::TestFullPipeline::test_greet_pipeline PASSED [  0%]
+tests/integration/test_integration.py::TestFullPipeline::test_help_pipeline PASSED [  0%]
+tests/integration/test_integration.py::TestFullPipeline::test_farewell_pipeline PASSED [  0%]
+tests/integration/test_integration.py::TestFullPipeline::test_search_pipeline PASSED [  1%]
+tests/integration/test_integration.py::TestMultipleUsers::test_concurrent_users PASSED [  1%]
+tests/integration/test_integration.py::TestMultipleUsers::test_rate_limiting_per_user PASSED [  1%]
+tests/integration/test_integration.py::TestCaching::test_cache_hit PASSED [  1%]
+tests/integration/test_integration.py::TestCaching::test_cache_clear PASSED [  2%]
+tests/integration/test_integration.py::TestErrorHandling::test_invalid_query_handling PASSED [  2%]
+tests/integration/test_integration.py::TestErrorHandling::test_malicious_query_handling FAILED [  2%]
+tests/integration/test_integration.py::TestErrorHandling::test_very_long_query_handling PASSED [  3%]
+tests/integration/test_integration.py::TestStatsAndMonitoring::test_router_stats PASSED [  3%]
+tests/integration/test_integration.py::TestStatsAndMonitoring::test_engine_stats FAILED [  3%]
+tests/integration/test_integration.py::TestEdgeCasesIntegration::test_unicode_queries PASSED [  3%]
+tests/integration/test_integration.py::TestEdgeCasesIntegration::test_empty_user_id PASSED [  4%]
+tests/integration/test_integration.py::TestEdgeCasesIntegration::test_special_characters_in_query PASSED [  4%]
+tests/integration/test_v4_integration.py::TestV4Integration::test_feature_flags_integration_with_complexity_analyzer PASSED [  4%]
+tests/integration/test_v4_integration.py::TestV4Integration::test_complexity_analyzer_integration_with_adaptive_thinking PASSED [  5%]
+tests/integration/test_v4_integration.py::TestV4Integration::test_self_refining_integration_with_adaptive_thinking PASSED [  5%]
+tests/integration/test_v4_integration.py::TestV4Integration::test_end_to_end_query_processing FAILED [  5%]
+tests/integration/test_v4_integration.py::TestV4Integration::test_concurrent_access_multiple_threads PASSED [  5%]
+tests/integration/test_v4_integration.py::TestV4Integration::test_memory_usage_under_load PASSED [  6%]
+tests/integration/test_v4_integration.py::TestV4Integration::test_performance_benchmark PASSED [  6%]
+tests/integration/test_v4_integration.py::TestV4Integration::test_edge_cases_empty_and_special_inputs PASSED [  6%]
+tests/integration/test_v4_integration.py::TestV4Integration::test_security_input_validation PASSED [  7%]
+tests/integration/test_v4_integration.py::TestV4Integration::test_config_validation PASSED [  7%]
+tests/integration/test_v4_integration.py::TestV4Integration::test_state_consistency_after_errors PASSED [  7%]
+tests/integration/test_v4_integration.py::TestV4Integration::test_stats_and_monitoring PASSED [  7%]
+tests/integration/test_v4_integration.py::TestV4Integration::test_serialization_and_deserialization PASSED [  8%]
+tests/integration/test_v4_integration.py::TestSecurityAnalystIntegration::test_security_analyst_basic FAILED [  8%]
+tests/integration/test_v4_integration.py::TestSecurityAnalystIntegration::test_enhanced_buddy_reviewer_basic SKIPPED [  8%]
+tests/integration/test_v4_integration.py::TestKairosDaemonIntegration::test_kairos_daemon_basic FAILED [  9%]
+tests/integration/test_v4_integration.py::TestContextManagerIntegration::test_context_manager_basic FAILED [  9%]
+tests/test_code_integrity.py::TestCodeIntegrity::test_checker_initialization FAILED [  9%]
+tests/test_code_integrity.py::TestCodeIntegrity::test_calculate_hash FAILED [  9%]
+tests/test_code_integrity.py::TestCodeIntegrity::test_verify_file_integrity FAILED [ 10%]
+tests/test_code_integrity.py::TestCodeIntegrity::test_detect_tampering FAILED [ 10%]
+tests/test_code_integrity.py::TestCodeIntegrity::test_check_imports_whitelist FAILED [ 10%]
+tests/test_code_integrity.py::TestCodeIntegrity::test_detect_dangerous_imports FAILED [ 11%]
+tests/test_code_integrity.py::TestCodeIntegrity::test_get_stats FAILED   [ 11%]
+tests/test_hybrid_engine.py::TestHybridEngine::test_engine_initialization PASSED [ 11%]
+tests/test_hybrid_engine.py::TestHybridEngine::test_memory_conversion_accuracy PASSED [ 11%]
+tests/test_hybrid_engine.py::TestHybridEngine::test_short_circuit_threshold PASSED [ 12%]
+tests/test_hybrid_engine.py::TestHybridEngine::test_process_with_empty_query FAILED [ 12%]
+tests/test_hybrid_engine.py::TestHybridEngine::test_process_with_valid_query PASSED [ 12%]
+tests/test_hybrid_engine.py::TestHybridEngine::test_get_stats PASSED     [ 12%]
+tests/test_hybrid_engine.py::TestHybridEngine::test_unload_and_reload_models PASSED [ 13%]
+tests/test_sandbox_executor.py::TestSandboxExecutor::test_executor_initialization PASSED [ 13%]
+tests/test_sandbox_executor.py::TestSandboxExecutor::test_execute_safe_code FAILED [ 13%]
+tests/test_sandbox_executor.py::TestSandboxExecutor::test_block_dangerous_imports FAILED [ 14%]
+tests/test_sandbox_executor.py::TestSandboxExecutor::test_execution_timeout FAILED [ 14%]
+tests/test_sandbox_executor.py::TestSandboxExecutor::test_memory_limit FAILED [ 14%]
+tests/test_sandbox_executor.py::TestSandboxExecutor::test_blocked_modules PASSED [ 14%]
+tests/test_sandbox_executor.py::TestSandboxExecutor::test_allowed_imports FAILED [ 15%]
+tests/test_sandbox_executor.py::TestSandboxExecutor::test_get_stats FAILED [ 15%]
+tests/test_sandbox_executor.py::TestSandboxExecutor::test_execute_with_custom_globals FAILED [ 15%]
+tests/test_sandbox_executor.py::TestSandboxExecutor::test_code_validation FAILED [ 16%]
+tests/test_self_healing.py::TestSelfHealingEngine::test_engine_initialization PASSED [ 16%]
+tests/test_self_healing.py::TestSelfHealingEngine::test_diagnose_syntax_error PASSED [ 16%]
+tests/test_self_healing.py::TestSelfHealingEngine::test_diagnose_import_error PASSED [ 16%]
+tests/test_self_healing.py::TestSelfHealingEngine::test_knowledge_base_lookup PASSED [ 17%]
+tests/test_self_healing.py::TestSelfHealingEngine::test_heal_syntax_error PASSED [ 17%]
+tests/test_self_healing.py::TestSelfHealingEngine::test_heal_import_error PASSED [ 17%]
+tests/test_self_healing.py::TestSelfHealingEngine::test_validator_valid_code PASSED [ 18%]
+tests/test_self_healing.py::TestSelfHealingEngine::test_validator_invalid_code PASSED [ 18%]
+tests/test_self_healing.py::TestSelfHealingEngine::test_max_iterations_respected PASSED [ 18%]
+tests/test_self_healing.py::TestSelfHealingEngine::test_get_stats PASSED [ 18%]
+tests/test_semantic_engine.py::TestSemanticEngine::test_engine_initialization FAILED [ 19%]
+tests/test_semantic_engine.py::TestSemanticEngine::test_tokenize_basic FAILED [ 19%]
+tests/test_semantic_engine.py::TestSemanticEngine::test_tokenize_removes_stopwords FAILED [ 19%]
+tests/test_semantic_engine.py::TestSemanticEngine::test_similarity_calculation FAILED [ 20%]
+tests/test_semantic_engine.py::TestSemanticEngine::test_similarity_different_vectors FAILED [ 20%]
+tests/test_semantic_engine.py::TestSemanticEngine::test_match_without_model FAILED [ 20%]
+tests/test_semantic_engine.py::TestSemanticEngine::test_model_loading_failure FAILED [ 20%]
+tests/test_semantic_engine.py::TestSemanticEngine::test_unload_model FAILED [ 21%]
+tests/test_semantic_engine.py::TestSemanticEngine::test_get_stats FAILED [ 21%]
+tests/test_swarm.py::TestSwarmManager::test_manager_initialization FAILED [ 21%]
+tests/test_swarm.py::TestSwarmManager::test_thermal_guard_check FAILED   [ 22%]
+tests/test_swarm.py::TestSwarmManager::test_dispatch_single_agent FAILED [ 22%]
+tests/test_swarm.py::TestSwarmManager::test_max_agents_limit FAILED      [ 22%]
+tests/test_swarm.py::TestSwarmManager::test_get_active_agents_count FAILED [ 22%]
+tests/test_swarm.py::TestSwarmManager::test_shutdown_all_agents FAILED   [ 23%]
+tests/test_swarm.py::TestSwarmManager::test_get_stats FAILED             [ 23%]
+tests/test_swarm.py::TestSwarmManager::test_agent_timeout FAILED         [ 23%]
+tests/test_termux_compatibility.py::TestTermuxCompatibility::test_python_version PASSED [ 24%]
+tests/test_termux_compatibility.py::TestTermuxCompatibility::test_platform_architecture PASSED [ 24%]
+tests/test_termux_compatibility.py::TestTermuxCompatibility::test_no_forbidden_imports PASSED [ 24%]
+tests/test_termux_compatibility.py::TestTermuxCompatibility::test_allowed_imports PASSED [ 24%]
+tests/test_termux_compatibility.py::TestTermuxCompatibility::test_file_system_access PASSED [ 25%]
+tests/test_termux_compatibility.py::TestTermuxCompatibility::test_network_access PASSED [ 25%]
+tests/test_termux_compatibility.py::TestTermuxCompatibility::test_memory_limit PASSED [ 25%]
+tests/test_termux_compatibility.py::TestTermuxCompatibility::test_asyncio_available PASSED [ 25%]
+tests/test_termux_compatibility.py::TestMobileOptimizations::test_lazy_loading PASSED [ 26%]
+tests/test_termux_compatibility.py::TestMobileOptimizations::test_short_circuit_evaluation FAILED [ 26%]
+tests/test_termux_compatibility.py::TestMobileOptimizations::test_thermal_guard_activation FAILED [ 26%]
+tests/test_termux_compatibility.py::TestMobileOptimizations::test_resource_monitoring FAILED [ 27%]
+tests/test_termux_compatibility.py::TestSecurityConstraints::test_no_eval_usage FAILED [ 27%]
+tests/test_termux_compatibility.py::TestSecurityConstraints::test_no_exec_usage FAILED [ 27%]
+tests/test_termux_compatibility.py::TestSecurityConstraints::test_sandbox_restrictions FAILED [ 27%]
+tests/test_termux_compatibility.py::TestPerformanceConstraints::test_regex_engine_speed FAILED [ 28%]
+tests/test_termux_compatibility.py::TestPerformanceConstraints::test_fuzzy_engine_speed FAILED [ 28%]
+tests/test_termux_compatibility.py::TestPerformanceConstraints::test_memory_footprint FAILED [ 28%]
+tests/test_thermal_swarm.py::TestThermalGuard::test_initial_temperature PASSED [ 29%]
+tests/test_thermal_swarm.py::TestThermalGuard::test_set_temperature PASSED [ 29%]
+tests/test_thermal_swarm.py::TestThermalGuard::test_no_throttle_at_normal_temp PASSED [ 29%]
+tests/test_thermal_swarm.py::TestThermalGuard::test_throttle_at_high_temp PASSED [ 29%]
+tests/test_thermal_swarm.py::TestThermalGuard::test_pause_at_critical_temp PASSED [ 30%]
+tests/test_thermal_swarm.py::TestThermalGuard::test_max_agents_at_normal_temp PASSED [ 30%]
+tests/test_thermal_swarm.py::TestThermalGuard::test_max_agents_at_high_temp PASSED [ 30%]
+tests/test_thermal_swarm.py::TestThermalGuard::test_max_agents_at_critical_temp PASSED [ 31%]
+tests/test_thermal_swarm.py::TestThermalGuard::test_threshold_boundary PASSED [ 31%]
+tests/test_thermal_swarm.py::TestSwarmManager::test_add_agent PASSED     [ 31%]
+tests/test_thermal_swarm.py::TestSwarmManager::test_execute_swarm_with_agents FAILED [ 31%]
+tests/test_thermal_swarm.py::TestSwarmManager::test_execute_swarm_respects_thermal_limit FAILED [ 32%]
+tests/test_thermal_swarm.py::TestSwarmManager::test_execute_swarm_at_critical_temp FAILED [ 32%]
+tests/test_thermal_swarm.py::TestSwarmManager::test_execution_log FAILED [ 32%]
+tests/test_thermal_swarm.py::TestSwarmManager::test_multiple_swarm_executions FAILED [ 33%]
+tests/test_thermal_swarm.py::TestThermalSwarmIntegration::test_dynamic_throttling FAILED [ 33%]
+tests/test_thermal_swarm.py::TestThermalSwarmIntegration::test_graceful_degradation FAILED [ 33%]
+tests/test_thermal_swarm.py::TestThermalSwarmIntegration::test_recovery_after_cooling FAILED [ 33%]
+tests/test_thermal_swarm.py::TestThermalSwarmIntegration::test_concurrent_execution_with_thermal_control FAILED [ 34%]
+tests/test_thermal_swarm.py::TestEdgeCases::test_empty_swarm FAILED      [ 34%]
+tests/test_thermal_swarm.py::TestEdgeCases::test_single_agent_swarm FAILED [ 34%]
+tests/test_thermal_swarm.py::TestEdgeCases::test_agent_failure_handling FAILED [ 35%]
+tests/test_thermal_swarm.py::TestEdgeCases::test_negative_temperature PASSED [ 35%]
+tests/test_thermal_swarm.py::TestEdgeCases::test_very_high_temperature PASSED [ 35%]
+tests/test_vector_store_sqlite.py::TestVectorStoreSQLite::test_store_initialization FAILED [ 35%]
+tests/test_vector_store_sqlite.py::TestVectorStoreSQLite::test_add_vector FAILED [ 36%]
+tests/test_vector_store_sqlite.py::TestVectorStoreSQLite::test_search_vectors FAILED [ 36%]
+tests/test_vector_store_sqlite.py::TestVectorStoreSQLite::test_get_vector_by_id FAILED [ 36%]
+tests/test_vector_store_sqlite.py::TestVectorStoreSQLite::test_delete_vector FAILED [ 37%]
+tests/test_vector_store_sqlite.py::TestVectorStoreSQLite::test_update_vector FAILED [ 37%]
+tests/test_vector_store_sqlite.py::TestVectorStoreSQLite::test_get_stats FAILED [ 37%]
+tests/test_vector_store_sqlite.py::TestVectorStoreSQLite::test_clear_store FAILED [ 37%]
+tests/test_vector_store_sqlite.py::TestVectorStoreSQLite::test_batch_add_vectors FAILED [ 38%]
+tests/unit/test_expert_system.py::TestExpertEngineInitialization::test_init_with_valid_registry PASSED [ 38%]
+tests/unit/test_expert_system.py::TestExpertEngineInitialization::test_init_with_empty_registry PASSED [ 38%]
+tests/unit/test_expert_system.py::TestExpertEngineRules::test_multi_action_detection PASSED [ 38%]
+tests/unit/test_expert_system.py::TestExpertEngineRules::test_question_detection PASSED [ 39%]
+tests/unit/test_expert_system.py::TestExpertEngineRules::test_code_request_detection PASSED [ 39%]
+tests/unit/test_expert_system.py::TestExpertEngineRules::test_search_request_detection PASSED [ 39%]
+tests/unit/test_expert_system.py::TestExpertEngineRules::test_error_fix_detection PASSED [ 40%]
+tests/unit/test_expert_system.py::TestExpertEngineRules::test_negative_response_detection PASSED [ 40%]
+tests/unit/test_expert_system.py::TestExpertEngineRules::test_affirmative_response_detection PASSED [ 40%]
+tests/unit/test_expert_system.py::TestExpertEngineValidation::test_validate_with_previous_result PASSED [ 40%]
+tests/unit/test_expert_system.py::TestExpertEngineValidation::test_validate_with_context PASSED [ 41%]
+tests/unit/test_expert_system.py::TestExpertEngineValidation::test_validate_without_previous_result PASSED [ 41%]
+tests/unit/test_expert_system.py::TestExpertEngineValidation::test_validate_fallback PASSED [ 41%]
+tests/unit/test_expert_system.py::TestExpertEngineFallback::test_fallback_intent PASSED [ 42%]
+tests/unit/test_expert_system.py::TestExpertEngineFallback::test_fallback_metadata PASSED [ 42%]
+tests/unit/test_expert_system.py::TestExpertEngineMetadata::test_rule_metadata PASSED [ 42%]
+tests/unit/test_expert_system.py::TestExpertEngineEdgeCases::test_empty_query PASSED [ 42%]
+tests/unit/test_expert_system.py::TestExpertEngineEdgeCases::test_special_characters PASSED [ 43%]
+tests/unit/test_expert_system.py::TestExpertEngineEdgeCases::test_very_long_query PASSED [ 43%]
+tests/unit/test_feature_flags.py::TestFeatureFlagsManager::test_initialization PASSED [ 43%]
+tests/unit/test_feature_flags.py::TestFeatureFlagsManager::test_feature_flag_exists PASSED [ 44%]
+tests/unit/test_feature_flags.py::TestFeatureFlagsManager::test_is_feature_enabled_default FAILED [ 44%]
+tests/unit/test_feature_flags.py::TestFeatureFlagsManager::test_enable_disable_feature PASSED [ 44%]
+tests/unit/test_feature_flags.py::TestFeatureFlagsManager::test_rollout_percentage PASSED [ 44%]
+tests/unit/test_feature_flags.py::TestFeatureFlagsManager::test_set_rollout_percentage PASSED [ 45%]
+tests/unit/test_feature_flags.py::TestFeatureFlagsManager::test_is_feature_in_rollout PASSED [ 45%]
+tests/unit/test_feature_flags.py::TestFeatureFlagsManager::test_get_feature_description PASSED [ 45%]
+tests/unit/test_feature_flags.py::TestFeatureFlagsManager::test_add_custom_flag PASSED [ 46%]
+tests/unit/test_feature_flags.py::TestFeatureFlagsManager::test_remove_flag PASSED [ 46%]
+tests/unit/test_feature_flags.py::TestFeatureFlagsManager::test_singleton_pattern PASSED [ 46%]
+tests/unit/test_feature_flags.py::TestFeatureFlagsManager::test_export_to_dict PASSED [ 46%]
+tests/unit/test_feature_flags.py::TestFeatureFlagsManager::test_import_from_dict PASSED [ 47%]
+tests/unit/test_feature_flags.py::TestFeatureFlagDecorators::test_feature_required_enabled PASSED [ 47%]
+tests/unit/test_feature_flags.py::TestFeatureFlagDecorators::test_feature_required_disabled PASSED [ 47%]
+tests/unit/test_feature_flags.py::TestFeatureFlagDecorators::test_is_feature_enabled_helper PASSED [ 48%]
+tests/unit/test_feature_flags.py::TestFeatureFlagEdgeCases::test_nonexistent_flag PASSED [ 48%]
+tests/unit/test_feature_flags.py::TestFeatureFlagEdgeCases::test_invalid_rollout_percentage PASSED [ 48%]
+tests/unit/test_feature_flags.py::TestFeatureFlagEdgeCases::test_concurrent_access PASSED [ 48%]
+tests/unit/test_feature_flags.py::TestFeatureFlagEdgeCases::test_large_number_of_flags PASSED [ 49%]
+tests/unit/test_feature_flags.py::TestFeatureFlagEdgeCases::test_persistence PASSED [ 49%]
+tests/unit/test_fuzzy_engine.py::TestFuzzyEngineInitialization::test_init_with_valid_registry PASSED [ 49%]
+tests/unit/test_fuzzy_engine.py::TestFuzzyEngineInitialization::test_init_with_default_threshold PASSED [ 50%]
+tests/unit/test_fuzzy_engine.py::TestFuzzyEngineInitialization::test_init_with_custom_threshold PASSED [ 50%]
+tests/unit/test_fuzzy_engine.py::TestFuzzyEngineInitialization::test_init_extracts_keywords PASSED [ 50%]
+tests/unit/test_fuzzy_engine.py::TestFuzzyEngineMatching::test_exact_keyword_match PASSED [ 50%]
+tests/unit/test_fuzzy_engine.py::TestFuzzyEngineMatching::test_fuzzy_match_with_typo PASSED [ 51%]
+tests/unit/test_fuzzy_engine.py::TestFuzzyEngineMatching::test_fuzzy_match_with_missing_letter PASSED [ 51%]
+tests/unit/test_fuzzy_engine.py::TestFuzzyEngineMatching::test_contains_keyword PASSED [ 51%]
+tests/unit/test_fuzzy_engine.py::TestFuzzyEngineMatching::test_keyword_at_start PASSED [ 51%]
+tests/unit/test_fuzzy_engine.py::TestFuzzyEngineMatching::test_no_match_dissimilar_query PASSED [ 52%]
+tests/unit/test_fuzzy_engine.py::TestFuzzyEngineMatching::test_case_insensitive PASSED [ 52%]
+tests/unit/test_fuzzy_engine.py::TestFuzzyEngineMatching::test_whitespace_handling PASSED [ 52%]
+tests/unit/test_fuzzy_engine.py::TestFuzzyEngineLevenshtein::test_levenshtein_exact_match PASSED [ 53%]
+tests/unit/test_fuzzy_engine.py::TestFuzzyEngineLevenshtein::test_levenshtein_one_edit PASSED [ 53%]
+tests/unit/test_fuzzy_engine.py::TestFuzzyEngineLevenshtein::test_levenshtein_completely_different PASSED [ 53%]
+tests/unit/test_fuzzy_engine.py::TestFuzzyEngineLevenshtein::test_levenshtein_empty_strings PASSED [ 53%]
+tests/unit/test_fuzzy_engine.py::TestFuzzyEngineLevenshtein::test_levenshtein_same_length PASSED [ 54%]
+tests/unit/test_fuzzy_engine.py::TestFuzzyEngineLevenshtein::test_levenshtein_different_length PASSED [ 54%]
+tests/unit/test_fuzzy_engine.py::TestFuzzyEngineThreshold::test_above_threshold PASSED [ 54%]
+tests/unit/test_fuzzy_engine.py::TestFuzzyEngineThreshold::test_below_threshold PASSED [ 55%]
+tests/unit/test_fuzzy_engine.py::TestFuzzyEngineThreshold::test_threshold_zero PASSED [ 55%]
+tests/unit/test_fuzzy_engine.py::TestFuzzyEngineThreshold::test_threshold_one PASSED [ 55%]
+tests/unit/test_fuzzy_engine.py::TestFuzzyEngineMetadata::test_metadata_contains_keyword PASSED [ 55%]
+tests/unit/test_fuzzy_engine.py::TestFuzzyEngineMetadata::test_metadata_level PASSED [ 56%]
+tests/unit/test_fuzzy_engine.py::TestFuzzyEngineMetadata::test_metadata_threshold PASSED [ 56%]
+tests/unit/test_fuzzy_engine.py::TestFuzzyEngineEdgeCases::test_unicode_characters PASSED [ 56%]
+tests/unit/test_fuzzy_engine.py::TestFuzzyEngineEdgeCases::test_numbers_in_query PASSED [ 57%]
+tests/unit/test_fuzzy_engine.py::TestFuzzyEngineEdgeCases::test_special_characters PASSED [ 57%]
+tests/unit/test_fuzzy_engine.py::TestFuzzyEngineEdgeCases::test_very_long_keyword_match PASSED [ 57%]
+tests/unit/test_fuzzy_engine.py::TestFuzzyEnginePerformance::test_fast_execution PASSED [ 57%]
+tests/unit/test_fuzzy_engine.py::TestFuzzyEnginePerformance::test_memory_usage PASSED [ 58%]
+tests/unit/test_gateway.py::TestGatewaySanitization::test_sanitize_removes_html_tags FAILED [ 58%]
+tests/unit/test_gateway.py::TestGatewaySanitization::test_sanitize_removes_javascript_protocol PASSED [ 58%]
+tests/unit/test_gateway.py::TestGatewaySanitization::test_sanitize_limits_length PASSED [ 59%]
+tests/unit/test_gateway.py::TestGatewaySanitization::test_sanitize_handles_non_string PASSED [ 59%]
+tests/unit/test_gateway.py::TestGatewaySanitization::test_sanitize_preserves_normal_text PASSED [ 59%]
+tests/unit/test_gateway.py::TestGatewayAuth::test_generate_token_returns_string PASSED [ 59%]
+tests/unit/test_gateway.py::TestGatewayAuth::test_verify_valid_token FAILED [ 60%]
+tests/unit/test_gateway.py::TestGatewayAuth::test_verify_expired_token FAILED [ 60%]
+tests/unit/test_gateway.py::TestGatewayAuth::test_verify_invalid_token FAILED [ 60%]
+tests/unit/test_gateway.py::TestGatewayAuth::test_token_contains_required_claims FAILED [ 61%]
+tests/unit/test_gateway.py::TestGatewayRateLimiting::test_allows_under_limit PASSED [ 61%]
+tests/unit/test_gateway.py::TestGatewayRateLimiting::test_blocks_over_limit PASSED [ 61%]
+tests/unit/test_gateway.py::TestGatewayRateLimiting::test_resets_after_window PASSED [ 61%]
+tests/unit/test_gateway.py::TestGatewayRateLimiting::test_different_users_independent PASSED [ 62%]
+tests/unit/test_gateway.py::TestGatewayAntiFraud::test_block_ip PASSED   [ 62%]
+tests/unit/test_gateway.py::TestGatewayAntiFraud::test_unblocked_ip PASSED [ 62%]
+tests/unit/test_gateway.py::TestGatewayAntiFraud::test_multiple_blocked_ips PASSED [ 62%]
+tests/unit/test_gateway.py::TestGatewayAntiFraud::test_block_same_ip_twice PASSED [ 63%]
+tests/unit/test_gateway.py::TestGatewayIntegration::test_full_auth_flow FAILED [ 63%]
+tests/unit/test_gateway.py::TestGatewayIntegration::test_rate_limit_with_auth PASSED [ 63%]
+tests/unit/test_gateway.py::TestGatewayIntegration::test_security_chain FAILED [ 64%]
+tests/unit/test_query_complexity_analyzer.py::TestThinkingLevel::test_thinking_level_values PASSED [ 64%]
+tests/unit/test_query_complexity_analyzer.py::TestComplexityScore::test_complexity_score_creation PASSED [ 64%]
+tests/unit/test_query_complexity_analyzer.py::TestQueryComplexityAnalyzer::test_initialization PASSED [ 64%]
+tests/unit/test_query_complexity_analyzer.py::TestQueryComplexityAnalyzer::test_analyze_empty_query PASSED [ 65%]
+tests/unit/test_query_complexity_analyzer.py::TestQueryComplexityAnalyzer::test_analyze_simple_greeting PASSED [ 65%]
+tests/unit/test_query_complexity_analyzer.py::TestQueryComplexityAnalyzer::test_analyze_simple_question PASSED [ 65%]
+tests/unit/test_query_complexity_analyzer.py::TestQueryComplexityAnalyzer::test_analyze_standard_search PASSED [ 66%]
+tests/unit/test_query_complexity_analyzer.py::TestQueryComplexityAnalyzer::test_analyze_code_generation FAILED [ 66%]
+tests/unit/test_query_complexity_analyzer.py::TestQueryComplexityAnalyzer::test_analyze_complex_analysis FAILED [ 66%]
+tests/unit/test_query_complexity_analyzer.py::TestQueryComplexityAnalyzer::test_analyze_multi_step_task FAILED [ 66%]
+tests/unit/test_query_complexity_analyzer.py::TestQueryComplexityAnalyzer::test_analyze_debugging_task FAILED [ 67%]
+tests/unit/test_query_complexity_analyzer.py::TestQueryComplexityAnalyzer::test_length_analysis PASSED [ 67%]
+tests/unit/test_query_complexity_analyzer.py::TestQueryComplexityAnalyzer::test_keyword_analysis_simple PASSED [ 67%]
+tests/unit/test_query_complexity_analyzer.py::TestQueryComplexityAnalyzer::test_keyword_analysis_complex PASSED [ 68%]
+tests/unit/test_query_complexity_analyzer.py::TestQueryComplexityAnalyzer::test_keyword_analysis_code PASSED [ 68%]
+tests/unit/test_query_complexity_analyzer.py::TestQueryComplexityAnalyzer::test_keyword_analysis_security PASSED [ 68%]
+tests/unit/test_query_complexity_analyzer.py::TestQueryComplexityAnalyzer::test_operator_analysis PASSED [ 68%]
+tests/unit/test_query_complexity_analyzer.py::TestQueryComplexityAnalyzer::test_multi_step_analysis_numbered PASSED [ 69%]
+tests/unit/test_query_complexity_analyzer.py::TestQueryComplexityAnalyzer::test_multi_step_analysis_sequence PASSED [ 69%]
+tests/unit/test_query_complexity_analyzer.py::TestQueryComplexityAnalyzer::test_syntax_analysis_multiple_sentences PASSED [ 69%]
+tests/unit/test_query_complexity_analyzer.py::TestQueryComplexityAnalyzer::test_syntax_analysis_multiple_questions PASSED [ 70%]
+tests/unit/test_query_complexity_analyzer.py::TestQueryComplexityAnalyzer::test_syntax_analysis_parentheses PASSED [ 70%]
+tests/unit/test_query_complexity_analyzer.py::TestQueryComplexityAnalyzer::test_final_score_calculation PASSED [ 70%]
+tests/unit/test_query_complexity_analyzer.py::TestQueryComplexityAnalyzer::test_final_score_normalization PASSED [ 70%]
+tests/unit/test_query_complexity_analyzer.py::TestQueryComplexityAnalyzer::test_level_determination_rapido PASSED [ 71%]
+tests/unit/test_query_complexity_analyzer.py::TestQueryComplexityAnalyzer::test_level_determination_estandar FAILED [ 71%]
+tests/unit/test_query_complexity_analyzer.py::TestQueryComplexityAnalyzer::test_level_determination_profundo FAILED [ 71%]
+tests/unit/test_query_complexity_analyzer.py::TestQueryComplexityAnalyzer::test_level_determination_maximo FAILED [ 72%]
+tests/unit/test_query_complexity_analyzer.py::TestQueryComplexityAnalyzer::test_confidence_calculation PASSED [ 72%]
+tests/unit/test_query_complexity_analyzer.py::TestQueryComplexityAnalyzer::test_get_level_info_rapido PASSED [ 72%]
+tests/unit/test_query_complexity_analyzer.py::TestQueryComplexityAnalyzer::test_get_level_info_estandar PASSED [ 72%]
+tests/unit/test_query_complexity_analyzer.py::TestQueryComplexityAnalyzer::test_get_level_info_profundo PASSED [ 73%]
+tests/unit/test_query_complexity_analyzer.py::TestQueryComplexityAnalyzer::test_get_level_info_maximo PASSED [ 73%]
+tests/unit/test_query_complexity_analyzer.py::TestQueryComplexityAnalyzer::test_custom_config PASSED [ 73%]
+tests/unit/test_query_complexity_analyzer.py::TestQueryComplexityAnalyzer::test_singleton_pattern PASSED [ 74%]
+tests/unit/test_query_complexity_analyzer.py::TestQueryComplexityAnalyzer::test_global_helper_function PASSED [ 74%]
+tests/unit/test_query_complexity_analyzer.py::TestQueryComplexityAnalyzer::test_context_parameter PASSED [ 74%]
+tests/unit/test_query_complexity_analyzer.py::TestQueryComplexityAnalyzer::test_special_characters PASSED [ 74%]
+tests/unit/test_query_complexity_analyzer.py::TestQueryComplexityAnalyzer::test_unicode_characters PASSED [ 75%]
+tests/unit/test_query_complexity_analyzer.py::TestQueryComplexityAnalyzer::test_very_long_query PASSED [ 75%]
+tests/unit/test_query_complexity_analyzer.py::TestQueryComplexityAnalyzer::test_reasoning_output PASSED [ 75%]
+tests/unit/test_query_complexity_analyzer.py::TestQueryComplexityAnalyzer::test_factors_output PASSED [ 75%]
+tests/unit/test_regex_engine.py::TestRegexEngineInitialization::test_init_with_valid_registry PASSED [ 76%]
+tests/unit/test_regex_engine.py::TestRegexEngineInitialization::test_init_with_empty_registry PASSED [ 76%]
+tests/unit/test_regex_engine.py::TestRegexEngineInitialization::test_init_compiles_all_patterns PASSED [ 76%]
+tests/unit/test_regex_engine.py::TestRegexEngineMatching::test_exact_match_greet PASSED [ 77%]
+tests/unit/test_regex_engine.py::TestRegexEngineMatching::test_exact_match_farewell PASSED [ 77%]
+tests/unit/test_regex_engine.py::TestRegexEngineMatching::test_exact_match_help PASSED [ 77%]
+tests/unit/test_regex_engine.py::TestRegexEngineMatching::test_case_insensitive_match PASSED [ 77%]
+tests/unit/test_regex_engine.py::TestRegexEngineMatching::test_pattern_variation_match PASSED [ 78%]
+tests/unit/test_regex_engine.py::TestRegexEngineMatching::test_no_match_unknown_query PASSED [ 78%]
+tests/unit/test_regex_engine.py::TestRegexEngineMatching::test_no_match_partial_query PASSED [ 78%]
+tests/unit/test_regex_engine.py::TestRegexEngineMatching::test_whitespace_handling PASSED [ 79%]
+tests/unit/test_regex_engine.py::TestRegexEngineMatching::test_empty_query PASSED [ 79%]
+tests/unit/test_regex_engine.py::TestRegexEngineMatching::test_special_characters PASSED [ 79%]
+tests/unit/test_regex_engine.py::TestRegexEngineMetadata::test_metadata_contains_pattern PASSED [ 79%]
+tests/unit/test_regex_engine.py::TestRegexEngineMetadata::test_metadata_level PASSED [ 80%]
+tests/unit/test_regex_engine.py::TestRegexEngineEdgeCases::test_unicode_characters PASSED [ 80%]
+tests/unit/test_regex_engine.py::TestRegexEngineEdgeCases::test_emoji_query PASSED [ 80%]
+tests/unit/test_regex_engine.py::TestRegexEngineEdgeCases::test_very_long_query PASSED [ 81%]
+tests/unit/test_regex_engine.py::TestRegexEngineEdgeCases::test_newline_characters PASSED [ 81%]
+tests/unit/test_regex_engine.py::TestRegexEngineEdgeCases::test_null_bytes PASSED [ 81%]
+tests/unit/test_regex_engine.py::TestRegexEnginePerformance::test_fast_execution PASSED [ 81%]
+tests/unit/test_regex_engine.py::TestRegexEnginePerformance::test_memory_usage PASSED [ 82%]
+tests/unit/test_self_refining_engine.py::TestRefinementStatus::test_status_values PASSED [ 82%]
+tests/unit/test_self_refining_engine.py::TestRefinementIteration::test_iteration_creation PASSED [ 82%]
+tests/unit/test_self_refining_engine.py::TestRefinementResult::test_result_creation PASSED [ 83%]
+tests/unit/test_self_refining_engine.py::TestConfidenceEvaluator::test_initialization PASSED [ 83%]
+tests/unit/test_self_refining_engine.py::TestConfidenceEvaluator::test_evaluate_empty_response PASSED [ 83%]
+tests/unit/test_self_refining_engine.py::TestConfidenceEvaluator::test_evaluate_short_response PASSED [ 83%]
+tests/unit/test_self_refining_engine.py::TestConfidenceEvaluator::test_evaluate_long_response FAILED [ 84%]
+tests/unit/test_self_refining_engine.py::TestConfidenceEvaluator::test_evaluate_low_confidence_indicators PASSED [ 84%]
+tests/unit/test_self_refining_engine.py::TestConfidenceEvaluator::test_evaluate_high_confidence_indicators PASSED [ 84%]
+tests/unit/test_self_refining_engine.py::TestConfidenceEvaluator::test_evaluate_good_structure PASSED [ 85%]
+tests/unit/test_self_refining_engine.py::TestConfidenceEvaluator::test_evaluate_relevance PASSED [ 85%]
+tests/unit/test_self_refining_engine.py::TestConfidenceEvaluator::test_evaluate_contradictions PASSED [ 85%]
+tests/unit/test_self_refining_engine.py::TestConfidenceEvaluator::test_evaluate_normalization PASSED [ 85%]
+tests/unit/test_self_refining_engine.py::TestConfidenceEvaluator::test_custom_config PASSED [ 86%]
+tests/unit/test_self_refining_engine.py::TestSelfRefiningEngine::test_initialization PASSED [ 86%]
+tests/unit/test_self_refining_engine.py::TestSelfRefiningEngine::test_set_callbacks PASSED [ 86%]
+tests/unit/test_self_refining_engine.py::TestSelfRefiningEngine::test_refine_with_callbacks PASSED [ 87%]
+tests/unit/test_self_refining_engine.py::TestSelfRefiningEngine::test_refine_with_initial_response PASSED [ 87%]
+tests/unit/test_self_refining_engine.py::TestSelfRefiningEngine::test_refine_without_callbacks_error PASSED [ 87%]
+tests/unit/test_self_refining_engine.py::TestSelfRefiningEngine::test_quick_refine PASSED [ 87%]
+tests/unit/test_self_refining_engine.py::TestSelfRefiningEngine::test_refine_with_custom_threshold PASSED [ 88%]
+tests/unit/test_self_refining_engine.py::TestSelfRefiningEngine::test_refine_with_custom_max_iterations PASSED [ 88%]
+tests/unit/test_self_refining_engine.py::TestSelfRefiningEngine::test_refine_with_context PASSED [ 88%]
+tests/unit/test_self_refining_engine.py::TestSelfRefiningEngine::test_refine_timeout PASSED [ 88%]
+tests/unit/test_self_refining_engine.py::TestSelfRefiningEngine::test_refine_max_iterations_reached FAILED [ 89%]
+tests/unit/test_self_refining_engine.py::TestSelfRefiningEngine::test_refine_early_stop_on_threshold PASSED [ 89%]
+tests/unit/test_self_refining_engine.py::TestSelfRefiningEngine::test_refine_iteration_tracking PASSED [ 89%]
+tests/unit/test_self_refining_engine.py::TestSelfRefiningEngine::test_refine_reasoning_output PASSED [ 90%]
+tests/unit/test_self_refining_engine.py::TestSelfRefiningEngine::test_singleton_pattern PASSED [ 90%]
+tests/unit/test_self_refining_engine.py::TestSelfRefiningEngine::test_global_helper_function PASSED [ 90%]
+tests/unit/test_self_refining_engine.py::TestSelfRefiningEngine::test_example_callbacks PASSED [ 90%]
+tests/unit/test_swarm_manager.py::TestAgentStatus::test_agent_status_values PASSED [ 91%]
+tests/unit/test_swarm_manager.py::TestAgentResult::test_agent_result_default_values PASSED [ 91%]
+tests/unit/test_swarm_manager.py::TestAgentResult::test_agent_result_with_values PASSED [ 91%]
+tests/unit/test_swarm_manager.py::TestSwarmConfig::test_swarm_config_default_values PASSED [ 92%]
+tests/unit/test_swarm_manager.py::TestSwarmConfig::test_swarm_config_custom_values PASSED [ 92%]
+tests/unit/test_swarm_manager.py::TestThermalGuard::test_thermal_guard_initialization PASSED [ 92%]
+tests/unit/test_swarm_manager.py::TestThermalGuard::test_thermal_guard_get_system_temp_default PASSED [ 92%]
+tests/unit/test_swarm_manager.py::TestThermalGuard::test_thermal_guard_record_temp PASSED [ 93%]
+tests/unit/test_swarm_manager.py::TestThermalGuard::test_thermal_guard_temp_history_limit PASSED [ 93%]
+tests/unit/test_swarm_manager.py::TestThermalGuard::test_thermal_guard_should_not_pause_normal PASSED [ 93%]
+tests/unit/test_swarm_manager.py::TestThermalGuard::test_thermal_guard_get_max_agents_normal PASSED [ 94%]
+tests/unit/test_swarm_manager.py::TestThermalGuard::test_thermal_guard_get_thermal_status_normal PASSED [ 94%]
+tests/unit/test_swarm_manager.py::TestThermalGuard::test_thermal_guard_high_temp_simulation PASSED [ 94%]
+tests/unit/test_swarm_manager.py::TestSwarmManagerInitialization::test_swarm_manager_init_default PASSED [ 94%]
+tests/unit/test_swarm_manager.py::TestSwarmManagerInitialization::test_swarm_manager_init_custom_config PASSED [ 95%]
+tests/unit/test_swarm_manager.py::TestSwarmManagerSearch::test_swarm_search_basic FAILED [ 95%]
+tests/unit/test_swarm_manager.py::TestSwarmManagerSearch::test_swarm_search_with_specific_agents FAILED [ 95%]
+tests/unit/test_swarm_manager.py::TestSwarmManagerSearch::test_swarm_search_deduplication FAILED [ 96%]
+tests/unit/test_swarm_manager.py::TestSwarmManagerSearch::test_swarm_search_results_sorted_by_relevance FAILED [ 96%]
+tests/unit/test_swarm_manager.py::TestSwarmManagerSearch::test_swarm_search_empty_query FAILED [ 96%]
+tests/unit/test_swarm_manager.py::TestSwarmManagerSearch::test_swarm_search_thermal_status_included FAILED [ 96%]
+tests/unit/test_swarm_manager.py::TestSwarmManagerStats::test_swarm_manager_get_stats_initial PASSED [ 97%]
+tests/unit/test_swarm_manager.py::TestSwarmManagerStats::test_swarm_manager_stats_after_search FAILED [ 97%]
+tests/unit/test_swarm_manager.py::TestSwarmManagerStats::test_swarm_manager_clear_status PASSED [ 97%]
+tests/unit/test_swarm_manager.py::TestSearchSync::test_search_sync_basic PASSED [ 98%]
+tests/unit/test_swarm_manager.py::TestSwarmManagerEdgeCases::test_swarm_search_very_long_query FAILED [ 98%]
+tests/unit/test_swarm_manager.py::TestSwarmManagerEdgeCases::test_swarm_search_special_characters FAILED [ 98%]
+tests/unit/test_swarm_manager.py::TestSwarmManagerEdgeCases::test_swarm_search_unicode FAILED [ 98%]
+tests/unit/test_swarm_manager.py::TestSwarmManagerEdgeCases::test_swarm_search_single_agent FAILED [ 99%]
+tests/unit/test_swarm_manager.py::TestSwarmManagerEdgeCases::test_swarm_search_multiple_times FAILED [ 99%]
+tests/unit/test_swarm_manager.py::TestThermalGuardEdgeCases::test_thermal_guard_rapid_temperature_changes PASSED [ 99%]
+tests/unit/test_swarm_manager.py::TestThermalGuardEdgeCases::test_thermal_guard_consistent_readings PASSED [100%]
+
+=================================== FAILURES ===================================
+_______________ TestErrorHandling.test_malicious_query_handling ________________
+tests/integration/test_integration.py:184: in test_malicious_query_handling
+    assert result.success is False
+E   AssertionError: assert True is False
+E    +  where True = RouterResult(intent='fallback', action='dispatch', data={'agent': 'swarm_manager', 'action': 'multi_agent_search', 'query': 'alert(1)', 'status': 'pending', 'reason': 'fallback'}, success=True, error=None, metadata={}, processing_time_ms=17.91691780090332).success
+------------------------------ Captured log call -------------------------------
+WARNING  src.hybrid_engine:hybrid_engine.py:114 No se pudo cargar modelo ONNX: No module named 'numpy'. Usando solo niveles 1-2-4
+___________________ TestStatsAndMonitoring.test_engine_stats ___________________
+tests/integration/test_integration.py:229: in test_engine_stats
+    assert "total_queries" in stats
+E   AssertionError: assert 'total_queries' in {'initialized': False, 'models_loaded': False, 'short_circuit_threshold': 0.95, 'levels_enabled': {'regex': False, 'fuzzy': False, 'semantic': False, 'expert': False}}
+______________ TestV4Integration.test_end_to_end_query_processing ______________
+tests/integration/test_v4_integration.py:130: in test_end_to_end_query_processing
+    assert flags.is_enabled("adaptive_thinking")
+E   AssertionError: assert False
+E    +  where False = is_enabled('adaptive_thinking')
+E    +    where is_enabled = <src.features.feature_flags.FeatureFlagsManager object at 0x767c413a10>.is_enabled
+__________ TestSecurityAnalystIntegration.test_security_analyst_basic __________
+tests/integration/test_v4_integration.py:364: in test_security_analyst_basic
+    assert result.score >= 0.7  # Debería ser seguro
+           ^^^^^^^^^^^^
+E   AttributeError: 'SecurityReport' object has no attribute 'score'
+_____________ TestKairosDaemonIntegration.test_kairos_daemon_basic _____________
+tests/integration/test_v4_integration.py:407: in test_kairos_daemon_basic
+    assert daemon.is_running is False
+           ^^^^^^^^^^^^^^^^^
+E   AttributeError: 'KairosDaemon' object has no attribute 'is_running'
+___________ TestContextManagerIntegration.test_context_manager_basic ___________
+tests/integration/test_v4_integration.py:432: in test_context_manager_basic
+    manager.add_message("user", "Hola")
+    ^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'ContextManager' object has no attribute 'add_message'
+________________ TestCodeIntegrity.test_checker_initialization _________________
+tests/test_code_integrity.py:17: in test_checker_initialization
+    from src.security.code_integrity import CodeIntegrityChecker
+E   ImportError: cannot import name 'CodeIntegrityChecker' from 'src.security.code_integrity' (/root/claw-lite-ultra-pro/tests/integration/../../src/security/code_integrity.py)
+____________________ TestCodeIntegrity.test_calculate_hash _____________________
+tests/test_code_integrity.py:24: in test_calculate_hash
+    from src.security.code_integrity import CodeIntegrityChecker
+E   ImportError: cannot import name 'CodeIntegrityChecker' from 'src.security.code_integrity' (/root/claw-lite-ultra-pro/tests/integration/../../src/security/code_integrity.py)
+_________________ TestCodeIntegrity.test_verify_file_integrity _________________
+tests/test_code_integrity.py:38: in test_verify_file_integrity
+    from src.security.code_integrity import CodeIntegrityChecker
+E   ImportError: cannot import name 'CodeIntegrityChecker' from 'src.security.code_integrity' (/root/claw-lite-ultra-pro/tests/integration/../../src/security/code_integrity.py)
+___________________ TestCodeIntegrity.test_detect_tampering ____________________
+tests/test_code_integrity.py:58: in test_detect_tampering
+    from src.security.code_integrity import CodeIntegrityChecker
+E   ImportError: cannot import name 'CodeIntegrityChecker' from 'src.security.code_integrity' (/root/claw-lite-ultra-pro/tests/integration/../../src/security/code_integrity.py)
+________________ TestCodeIntegrity.test_check_imports_whitelist ________________
+tests/test_code_integrity.py:88: in test_check_imports_whitelist
+    from src.security.code_integrity import CodeIntegrityChecker
+E   ImportError: cannot import name 'CodeIntegrityChecker' from 'src.security.code_integrity' (/root/claw-lite-ultra-pro/tests/integration/../../src/security/code_integrity.py)
+_______________ TestCodeIntegrity.test_detect_dangerous_imports ________________
+tests/test_code_integrity.py:104: in test_detect_dangerous_imports
+    from src.security.code_integrity import CodeIntegrityChecker
+E   ImportError: cannot import name 'CodeIntegrityChecker' from 'src.security.code_integrity' (/root/claw-lite-ultra-pro/tests/integration/../../src/security/code_integrity.py)
+_______________________ TestCodeIntegrity.test_get_stats _______________________
+tests/test_code_integrity.py:121: in test_get_stats
+    from src.security.code_integrity import CodeIntegrityChecker
+E   ImportError: cannot import name 'CodeIntegrityChecker' from 'src.security.code_integrity' (/root/claw-lite-ultra-pro/tests/integration/../../src/security/code_integrity.py)
+________________ TestHybridEngine.test_process_with_empty_query ________________
+tests/test_hybrid_engine.py:72: in test_process_with_empty_query
+    assert result.intent_name == "unknown" or result.confidence == 0.0
+E   AssertionError: assert ('fallback' == 'unknown'
+E     
+E     - unknown
+E     + fallback or 0.5 == 0.0)
+E    +  where 0.5 = IntentResult(intent_name='fallback', confidence=0.5, level_reached=4, metadata={'level': 'expert', 'fallback_type': 'agent', 'fallback_details': {}, 'reason': 'No se pudo determinar intenci\xf3n clara'}).confidence
+__________________ TestSandboxExecutor.test_execute_safe_code __________________
+tests/test_sandbox_executor.py:43: in test_execute_safe_code
+    assert result.success is True
+           ^^^^^^^^^^^^^^
+E   AttributeError: 'ExecutionResult' object has no attribute 'success'
+_______________ TestSandboxExecutor.test_block_dangerous_imports _______________
+tests/test_sandbox_executor.py:53: in test_block_dangerous_imports
+    assert result.success is False or "import" in str(result.error).lower()
+           ^^^^^^^^^^^^^^
+E   AttributeError: 'ExecutionResult' object has no attribute 'success'
+__________________ TestSandboxExecutor.test_execution_timeout __________________
+tests/test_sandbox_executor.py:63: in test_execution_timeout
+    executor = SandboxExecutor(timeout=2)  # 2 segundos
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   TypeError: SandboxExecutor.__init__() got an unexpected keyword argument 'timeout'
+____________________ TestSandboxExecutor.test_memory_limit _____________________
+tests/test_sandbox_executor.py:78: in test_memory_limit
+    executor = SandboxExecutor(max_memory_mb=50)  # 50MB
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   TypeError: SandboxExecutor.__init__() got an unexpected keyword argument 'max_memory_mb'
+___________________ TestSandboxExecutor.test_allowed_imports ___________________
+tests/test_sandbox_executor.py:117: in test_allowed_imports
+    assert result.success is True
+           ^^^^^^^^^^^^^^
+E   AttributeError: 'ExecutionResult' object has no attribute 'success'
+______________________ TestSandboxExecutor.test_get_stats ______________________
+tests/test_sandbox_executor.py:124: in test_get_stats
+    stats = executor.get_stats()
+            ^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'SandboxExecutor' object has no attribute 'get_stats'
+_____________ TestSandboxExecutor.test_execute_with_custom_globals _____________
+tests/test_sandbox_executor.py:138: in test_execute_with_custom_globals
+    result = executor.execute(code, custom_globals=custom_globals)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   TypeError: SandboxExecutor.execute() got an unexpected keyword argument 'custom_globals'
+___________________ TestSandboxExecutor.test_code_validation ___________________
+tests/test_sandbox_executor.py:154: in test_code_validation
+    assert result.success is False or "syntax" in str(result.error).lower()
+           ^^^^^^^^^^^^^^
+E   AttributeError: 'ExecutionResult' object has no attribute 'success'
+________________ TestSemanticEngine.test_engine_initialization _________________
+tests/test_semantic_engine.py:15: in test_engine_initialization
+    from src.engine.nivel_3_semantic import SemanticEngine
+src/engine/nivel_3_semantic.py:12: in <module>
+    import numpy as np
+E   ModuleNotFoundError: No module named 'numpy'
+____________________ TestSemanticEngine.test_tokenize_basic ____________________
+tests/test_semantic_engine.py:24: in test_tokenize_basic
+    from src.engine.nivel_3_semantic import SemanticEngine
+src/engine/nivel_3_semantic.py:12: in <module>
+    import numpy as np
+E   ModuleNotFoundError: No module named 'numpy'
+______________ TestSemanticEngine.test_tokenize_removes_stopwords ______________
+tests/test_semantic_engine.py:34: in test_tokenize_removes_stopwords
+    from src.engine.nivel_3_semantic import SemanticEngine
+src/engine/nivel_3_semantic.py:12: in <module>
+    import numpy as np
+E   ModuleNotFoundError: No module named 'numpy'
+________________ TestSemanticEngine.test_similarity_calculation ________________
+tests/test_semantic_engine.py:46: in test_similarity_calculation
+    from src.engine.nivel_3_semantic import SemanticEngine
+src/engine/nivel_3_semantic.py:12: in <module>
+    import numpy as np
+E   ModuleNotFoundError: No module named 'numpy'
+_____________ TestSemanticEngine.test_similarity_different_vectors _____________
+tests/test_semantic_engine.py:59: in test_similarity_different_vectors
+    from src.engine.nivel_3_semantic import SemanticEngine
+src/engine/nivel_3_semantic.py:12: in <module>
+    import numpy as np
+E   ModuleNotFoundError: No module named 'numpy'
+_________________ TestSemanticEngine.test_match_without_model __________________
+tests/test_semantic_engine.py:71: in test_match_without_model
+    from src.engine.nivel_3_semantic import SemanticEngine
+src/engine/nivel_3_semantic.py:12: in <module>
+    import numpy as np
+E   ModuleNotFoundError: No module named 'numpy'
+________________ TestSemanticEngine.test_model_loading_failure _________________
+tests/test_semantic_engine.py:84: in test_model_loading_failure
+    from src.engine.nivel_3_semantic import SemanticEngine
+src/engine/nivel_3_semantic.py:12: in <module>
+    import numpy as np
+E   ModuleNotFoundError: No module named 'numpy'
+_____________________ TestSemanticEngine.test_unload_model _____________________
+tests/test_semantic_engine.py:94: in test_unload_model
+    from src.engine.nivel_3_semantic import SemanticEngine
+src/engine/nivel_3_semantic.py:12: in <module>
+    import numpy as np
+E   ModuleNotFoundError: No module named 'numpy'
+______________________ TestSemanticEngine.test_get_stats _______________________
+tests/test_semantic_engine.py:102: in test_get_stats
+    from src.engine.nivel_3_semantic import SemanticEngine
+src/engine/nivel_3_semantic.py:12: in <module>
+    import numpy as np
+E   ModuleNotFoundError: No module named 'numpy'
+_________________ TestSwarmManager.test_manager_initialization _________________
+tests/test_swarm.py:28: in test_manager_initialization
+    assert manager.max_agents == 2
+           ^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'SwarmManager' object has no attribute 'max_agents'
+__________________ TestSwarmManager.test_thermal_guard_check ___________________
+tests/test_swarm.py:37: in test_thermal_guard_check
+    with patch.object(manager, '_get_system_temp', return_value=45):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/data/data/com.termux/files/usr/lib/python3.13/unittest/mock.py:1497: in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+/data/data/com.termux/files/usr/lib/python3.13/unittest/mock.py:1467: in get_original
+    raise AttributeError(
+E   AttributeError: <src.agents.swarm_manager.SwarmManager object at 0x767c4ac690> does not have the attribute '_get_system_temp'
+_________________ TestSwarmManager.test_dispatch_single_agent __________________
+tests/test_swarm.py:56: in test_dispatch_single_agent
+    result = manager.dispatch(mock_agent, "test_query")
+             ^^^^^^^^^^^^^^^^
+E   AttributeError: 'SwarmManager' object has no attribute 'dispatch'
+____________________ TestSwarmManager.test_max_agents_limit ____________________
+tests/test_swarm.py:70: in test_max_agents_limit
+    manager.dispatch(mock_agent, "query1")
+    ^^^^^^^^^^^^^^^^
+E   AttributeError: 'SwarmManager' object has no attribute 'dispatch'
+________________ TestSwarmManager.test_get_active_agents_count _________________
+tests/test_swarm.py:82: in test_get_active_agents_count
+    count = manager.get_active_agents_count()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'SwarmManager' object has no attribute 'get_active_agents_count'
+__________________ TestSwarmManager.test_shutdown_all_agents ___________________
+tests/test_swarm.py:93: in test_shutdown_all_agents
+    manager.shutdown_all()
+    ^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'SwarmManager' object has no attribute 'shutdown_all'
+_______________________ TestSwarmManager.test_get_stats ________________________
+tests/test_swarm.py:103: in test_get_stats
+    stats = manager.get_stats()
+            ^^^^^^^^^^^^^^^^^^^
+src/agents/swarm_manager.py:389: in get_stats
+    "thermal_status": self.thermal_guard.get_thermal_status(),
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/agents/swarm_manager.py:135: in get_thermal_status
+    if temp > self.config.temp_threshold_critical:
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'dict' object has no attribute 'temp_threshold_critical'
+_____________________ TestSwarmManager.test_agent_timeout ______________________
+tests/test_swarm.py:119: in test_agent_timeout
+    result = manager.dispatch(slow_agent, "slow_query", timeout=0.05)
+             ^^^^^^^^^^^^^^^^
+E   AttributeError: 'SwarmManager' object has no attribute 'dispatch'
+____________ TestMobileOptimizations.test_short_circuit_evaluation _____________
+tests/test_termux_compatibility.py:135: in test_short_circuit_evaluation
+    engine = HybridEngine()
+             ^^^^^^^^^^^^^^
+E   TypeError: HybridEngine.__init__() missing 1 required positional argument: 'config'
+____________ TestMobileOptimizations.test_thermal_guard_activation _____________
+tests/test_termux_compatibility.py:147: in test_thermal_guard_activation
+    from src.monitoring.thermal_monitor import ThermalMonitor
+E   ImportError: cannot import name 'ThermalMonitor' from 'src.monitoring.thermal_monitor' (/root/claw-lite-ultra-pro/tests/integration/../../src/monitoring/thermal_monitor.py)
+_______________ TestMobileOptimizations.test_resource_monitoring _______________
+tests/test_termux_compatibility.py:157: in test_resource_monitoring
+    from src.monitoring.resource_monitor import ResourceMonitor
+E   ImportError: cannot import name 'ResourceMonitor' from 'src.monitoring.resource_monitor' (/root/claw-lite-ultra-pro/tests/integration/../../src/monitoring/resource_monitor.py)
+__________________ TestSecurityConstraints.test_no_eval_usage __________________
+tests/test_termux_compatibility.py:185: in test_no_eval_usage
+    assert "sandbox" in str(py_file) or "safe" in str(py_file), \
+E   AssertionError: eval() encontrado en src/code_gen/buddy_reviewer.py fuera de sandbox
+E   assert ('sandbox' in 'src/code_gen/buddy_reviewer.py' or 'safe' in 'src/code_gen/buddy_reviewer.py')
+E    +  where 'src/code_gen/buddy_reviewer.py' = str(PosixPath('src/code_gen/buddy_reviewer.py'))
+E    +  and   'src/code_gen/buddy_reviewer.py' = str(PosixPath('src/code_gen/buddy_reviewer.py'))
+__________________ TestSecurityConstraints.test_no_exec_usage __________________
+tests/test_termux_compatibility.py:199: in test_no_exec_usage
+    assert "sandbox" in str(py_file) or "safe" in str(py_file), \
+E   AssertionError: exec() encontrado en src/code_gen/buddy_reviewer.py fuera de sandbox
+E   assert ('sandbox' in 'src/code_gen/buddy_reviewer.py' or 'safe' in 'src/code_gen/buddy_reviewer.py')
+E    +  where 'src/code_gen/buddy_reviewer.py' = str(PosixPath('src/code_gen/buddy_reviewer.py'))
+E    +  and   'src/code_gen/buddy_reviewer.py' = str(PosixPath('src/code_gen/buddy_reviewer.py'))
+______________ TestSecurityConstraints.test_sandbox_restrictions _______________
+tests/test_termux_compatibility.py:209: in test_sandbox_restrictions
+    assert hasattr(sandbox, 'ALLOWED_IMPORTS')
+E   AssertionError: assert False
+E    +  where False = hasattr(<src.code_gen.sandbox_executor.SandboxExecutor object at 0x767b760650>, 'ALLOWED_IMPORTS')
+______________ TestPerformanceConstraints.test_regex_engine_speed ______________
+tests/test_termux_compatibility.py:228: in test_regex_engine_speed
+    engine = RegexEngine()
+             ^^^^^^^^^^^^^
+E   TypeError: RegexEngine.__init__() missing 1 required positional argument: 'intents_registry'
+______________ TestPerformanceConstraints.test_fuzzy_engine_speed ______________
+tests/test_termux_compatibility.py:243: in test_fuzzy_engine_speed
+    engine = FuzzyEngine()
+             ^^^^^^^^^^^^^
+E   TypeError: FuzzyEngine.__init__() missing 1 required positional argument: 'intents_registry'
+_______________ TestPerformanceConstraints.test_memory_footprint _______________
+tests/test_termux_compatibility.py:255: in test_memory_footprint
+    import psutil
+E   ModuleNotFoundError: No module named 'psutil'
+_______________ TestSwarmManager.test_execute_swarm_with_agents ________________
+async def functions are not natively supported.
+You need to install a suitable plugin for your async framework, for example:
+  - anyio
+  - pytest-asyncio
+  - pytest-tornasync
+  - pytest-trio
+  - pytest-twisted
+__________ TestSwarmManager.test_execute_swarm_respects_thermal_limit __________
+async def functions are not natively supported.
+You need to install a suitable plugin for your async framework, for example:
+  - anyio
+  - pytest-asyncio
+  - pytest-tornasync
+  - pytest-trio
+  - pytest-twisted
+_____________ TestSwarmManager.test_execute_swarm_at_critical_temp _____________
+async def functions are not natively supported.
+You need to install a suitable plugin for your async framework, for example:
+  - anyio
+  - pytest-asyncio
+  - pytest-tornasync
+  - pytest-trio
+  - pytest-twisted
+_____________________ TestSwarmManager.test_execution_log ______________________
+async def functions are not natively supported.
+You need to install a suitable plugin for your async framework, for example:
+  - anyio
+  - pytest-asyncio
+  - pytest-tornasync
+  - pytest-trio
+  - pytest-twisted
+_______________ TestSwarmManager.test_multiple_swarm_executions ________________
+async def functions are not natively supported.
+You need to install a suitable plugin for your async framework, for example:
+  - anyio
+  - pytest-asyncio
+  - pytest-tornasync
+  - pytest-trio
+  - pytest-twisted
+_____________ TestThermalSwarmIntegration.test_dynamic_throttling ______________
+async def functions are not natively supported.
+You need to install a suitable plugin for your async framework, for example:
+  - anyio
+  - pytest-asyncio
+  - pytest-tornasync
+  - pytest-trio
+  - pytest-twisted
+____________ TestThermalSwarmIntegration.test_graceful_degradation _____________
+async def functions are not natively supported.
+You need to install a suitable plugin for your async framework, for example:
+  - anyio
+  - pytest-asyncio
+  - pytest-tornasync
+  - pytest-trio
+  - pytest-twisted
+___________ TestThermalSwarmIntegration.test_recovery_after_cooling ____________
+async def functions are not natively supported.
+You need to install a suitable plugin for your async framework, for example:
+  - anyio
+  - pytest-asyncio
+  - pytest-tornasync
+  - pytest-trio
+  - pytest-twisted
+__ TestThermalSwarmIntegration.test_concurrent_execution_with_thermal_control __
+async def functions are not natively supported.
+You need to install a suitable plugin for your async framework, for example:
+  - anyio
+  - pytest-asyncio
+  - pytest-tornasync
+  - pytest-trio
+  - pytest-twisted
+________________________ TestEdgeCases.test_empty_swarm ________________________
+async def functions are not natively supported.
+You need to install a suitable plugin for your async framework, for example:
+  - anyio
+  - pytest-asyncio
+  - pytest-tornasync
+  - pytest-trio
+  - pytest-twisted
+____________________ TestEdgeCases.test_single_agent_swarm _____________________
+async def functions are not natively supported.
+You need to install a suitable plugin for your async framework, for example:
+  - anyio
+  - pytest-asyncio
+  - pytest-tornasync
+  - pytest-trio
+  - pytest-twisted
+__________________ TestEdgeCases.test_agent_failure_handling ___________________
+async def functions are not natively supported.
+You need to install a suitable plugin for your async framework, for example:
+  - anyio
+  - pytest-asyncio
+  - pytest-tornasync
+  - pytest-trio
+  - pytest-twisted
+_______________ TestVectorStoreSQLite.test_store_initialization ________________
+tests/test_vector_store_sqlite.py:26: in test_store_initialization
+    from src.persistence.vector_store_sqlite import VectorStoreSQLite
+E   ImportError: cannot import name 'VectorStoreSQLite' from 'src.persistence.vector_store_sqlite' (/root/claw-lite-ultra-pro/tests/integration/../../src/persistence/vector_store_sqlite.py)
+____________________ TestVectorStoreSQLite.test_add_vector _____________________
+tests/test_vector_store_sqlite.py:34: in test_add_vector
+    from src.persistence.vector_store_sqlite import VectorStoreSQLite
+E   ImportError: cannot import name 'VectorStoreSQLite' from 'src.persistence.vector_store_sqlite' (/root/claw-lite-ultra-pro/tests/integration/../../src/persistence/vector_store_sqlite.py)
+__________________ TestVectorStoreSQLite.test_search_vectors ___________________
+tests/test_vector_store_sqlite.py:48: in test_search_vectors
+    from src.persistence.vector_store_sqlite import VectorStoreSQLite
+E   ImportError: cannot import name 'VectorStoreSQLite' from 'src.persistence.vector_store_sqlite' (/root/claw-lite-ultra-pro/tests/integration/../../src/persistence/vector_store_sqlite.py)
+_________________ TestVectorStoreSQLite.test_get_vector_by_id __________________
+tests/test_vector_store_sqlite.py:66: in test_get_vector_by_id
+    from src.persistence.vector_store_sqlite import VectorStoreSQLite
+E   ImportError: cannot import name 'VectorStoreSQLite' from 'src.persistence.vector_store_sqlite' (/root/claw-lite-ultra-pro/tests/integration/../../src/persistence/vector_store_sqlite.py)
+___________________ TestVectorStoreSQLite.test_delete_vector ___________________
+tests/test_vector_store_sqlite.py:80: in test_delete_vector
+    from src.persistence.vector_store_sqlite import VectorStoreSQLite
+E   ImportError: cannot import name 'VectorStoreSQLite' from 'src.persistence.vector_store_sqlite' (/root/claw-lite-ultra-pro/tests/integration/../../src/persistence/vector_store_sqlite.py)
+___________________ TestVectorStoreSQLite.test_update_vector ___________________
+tests/test_vector_store_sqlite.py:96: in test_update_vector
+    from src.persistence.vector_store_sqlite import VectorStoreSQLite
+E   ImportError: cannot import name 'VectorStoreSQLite' from 'src.persistence.vector_store_sqlite' (/root/claw-lite-ultra-pro/tests/integration/../../src/persistence/vector_store_sqlite.py)
+_____________________ TestVectorStoreSQLite.test_get_stats _____________________
+tests/test_vector_store_sqlite.py:113: in test_get_stats
+    from src.persistence.vector_store_sqlite import VectorStoreSQLite
+E   ImportError: cannot import name 'VectorStoreSQLite' from 'src.persistence.vector_store_sqlite' (/root/claw-lite-ultra-pro/tests/integration/../../src/persistence/vector_store_sqlite.py)
+____________________ TestVectorStoreSQLite.test_clear_store ____________________
+tests/test_vector_store_sqlite.py:128: in test_clear_store
+    from src.persistence.vector_store_sqlite import VectorStoreSQLite
+E   ImportError: cannot import name 'VectorStoreSQLite' from 'src.persistence.vector_store_sqlite' (/root/claw-lite-ultra-pro/tests/integration/../../src/persistence/vector_store_sqlite.py)
+_________________ TestVectorStoreSQLite.test_batch_add_vectors _________________
+tests/test_vector_store_sqlite.py:145: in test_batch_add_vectors
+    from src.persistence.vector_store_sqlite import VectorStoreSQLite
+E   ImportError: cannot import name 'VectorStoreSQLite' from 'src.persistence.vector_store_sqlite' (/root/claw-lite-ultra-pro/tests/integration/../../src/persistence/vector_store_sqlite.py)
+___________ TestFeatureFlagsManager.test_is_feature_enabled_default ____________
+tests/unit/test_feature_flags.py:55: in test_is_feature_enabled_default
+    assert manager.is_enabled("query_complexity_analyzer") is False
+E   AssertionError: assert True is False
+E    +  where True = is_enabled('query_complexity_analyzer')
+E    +    where is_enabled = <src.features.feature_flags.FeatureFlagsManager object at 0x767c29f230>.is_enabled
+___________ TestGatewaySanitization.test_sanitize_removes_html_tags ____________
+tests/unit/test_gateway.py:115: in test_sanitize_removes_html_tags
+    assert "<script>" not in result
+E   assert '<script>' not in "<script>alert('xss')</script>Hello"
+E     
+E     '<script>' is contained here:
+E       <script>alert('xss')</script>Hello
+E     ? ++++++++
+___________________ TestGatewayAuth.test_verify_valid_token ____________________
+tests/unit/test_gateway.py:163: in test_verify_valid_token
+    assert result["payload"]["user_id"] == "user123"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'user_id'
+__________________ TestGatewayAuth.test_verify_expired_token ___________________
+tests/unit/test_gateway.py:177: in test_verify_expired_token
+    assert result["valid"] is False
+E   assert True is False
+__________________ TestGatewayAuth.test_verify_invalid_token ___________________
+tests/unit/test_gateway.py:183: in test_verify_invalid_token
+    assert result["valid"] is False
+E   assert True is False
+_____________ TestGatewayAuth.test_token_contains_required_claims ______________
+tests/unit/test_gateway.py:191: in test_token_contains_required_claims
+    assert "user_id" in result["payload"]
+E   AssertionError: assert 'user_id' in {'user': 'mock_user', 'role': 'user'}
+__________________ TestGatewayIntegration.test_full_auth_flow __________________
+tests/unit/test_gateway.py:297: in test_full_auth_flow
+    user_id = result["payload"]["user_id"]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'user_id'
+__________________ TestGatewayIntegration.test_security_chain __________________
+tests/unit/test_gateway.py:323: in test_security_chain
+    assert "<script>" not in clean_input
+E   assert '<script>' not in "<script>alert('xss')</script>buscar precios"
+E     
+E     '<script>' is contained here:
+E       <script>alert('xss')</script>buscar precios
+E     ? ++++++++
+___________ TestQueryComplexityAnalyzer.test_analyze_code_generation ___________
+tests/unit/test_query_complexity_analyzer.py:96: in test_analyze_code_generation
+    assert result.level in [ThinkingLevel.ESTANDAR, ThinkingLevel.PROFUNDO]
+E   AssertionError: assert <ThinkingLevel.RAPIDO: 1> in [<ThinkingLevel.ESTANDAR: 2>, <ThinkingLevel.PROFUNDO: 3>]
+E    +  where <ThinkingLevel.RAPIDO: 1> = ComplexityScore(score=1.23, level=<ThinkingLevel.RAPIDO: 1>, factors={'length': 0.5, 'keywords': 2.5, 'operators': 0.0, 'multi_step': 0.0, 'task_type': 2.0, 'syntax': 0.0}, confidence=0.95, reasoning='1 palabras complejas detectadas | 1 keywords de c\xf3digo detectadas | Generaci\xf3n de c\xf3digo solicitada').level
+__________ TestQueryComplexityAnalyzer.test_analyze_complex_analysis ___________
+tests/unit/test_query_complexity_analyzer.py:104: in test_analyze_complex_analysis
+    assert result.level in [ThinkingLevel.PROFUNDO, ThinkingLevel.MAXIMO]
+E   AssertionError: assert <ThinkingLevel.RAPIDO: 1> in [<ThinkingLevel.PROFUNDO: 3>, <ThinkingLevel.MAXIMO: 4>]
+E    +  where <ThinkingLevel.RAPIDO: 1> = ComplexityScore(score=1.52, level=<ThinkingLevel.RAPIDO: 1>, factors={'length': 1.0, 'keywords': 3.0, 'operators': 0.5, 'multi_step': 0.0, 'task_type': 2.0, 'syntax': 0.0}, confidence=0.95, reasoning='Longitud: media (75 chars) | 3 palabras complejas detectadas | Operadores: y(1) | Generaci\xf3n de c\xf3digo solicitada').level
+___________ TestQueryComplexityAnalyzer.test_analyze_multi_step_task ___________
+tests/unit/test_query_complexity_analyzer.py:112: in test_analyze_multi_step_task
+    assert result.level in [ThinkingLevel.PROFUNDO, ThinkingLevel.MAXIMO]
+E   assert <ThinkingLevel.RAPIDO: 1> in [<ThinkingLevel.PROFUNDO: 3>, <ThinkingLevel.MAXIMO: 4>]
+E    +  where <ThinkingLevel.RAPIDO: 1> = ComplexityScore(score=3.56, level=<ThinkingLevel.RAPIDO: 1>, factors={'length': 1.5, 'keywords': 6.5, 'operators': 2.6, 'multi_step': 3.9, 'task_type': 2.0, 'syntax': 0.3}, confidence=0.75, reasoning="Longitud: alta (111 chars) | 2 palabras complejas detectadas | 3 keywords de c\xf3digo detectadas | Operadores: y(1), luego(1), primero(1), finalmente(1) | Indicador: 'primero' | Indicador: 'luego' | Indicador: 'finalmente' | Indicador: 'fin' | 3 palabras de secuencia | Generaci\xf3n de c\xf3digo solicitada | 3 cl\xe1usulas").level
+___________ TestQueryComplexityAnalyzer.test_analyze_debugging_task ____________
+tests/unit/test_query_complexity_analyzer.py:119: in test_analyze_debugging_task
+    assert result.level in [ThinkingLevel.ESTANDAR, ThinkingLevel.PROFUNDO]
+E   AssertionError: assert <ThinkingLevel.RAPIDO: 1> in [<ThinkingLevel.ESTANDAR: 2>, <ThinkingLevel.PROFUNDO: 3>]
+E    +  where <ThinkingLevel.RAPIDO: 1> = ComplexityScore(score=1.64, level=<ThinkingLevel.RAPIDO: 1>, factors={'length': 0.5, 'keywords': 4.0, 'operators': 0.0, 'multi_step': 0.0, 'task_type': 1.8, 'syntax': 0.0}, confidence=0.95, reasoning='1 palabras complejas detectadas | 2 keywords de c\xf3digo detectadas | Debugging/optimizaci\xf3n solicitada').level
+________ TestQueryComplexityAnalyzer.test_level_determination_estandar _________
+tests/unit/test_query_complexity_analyzer.py:244: in test_level_determination_estandar
+    assert level == ThinkingLevel.ESTANDAR
+E   assert <ThinkingLevel.RAPIDO: 1> == <ThinkingLevel.ESTANDAR: 2>
+E    +  where <ThinkingLevel.ESTANDAR: 2> = ThinkingLevel.ESTANDAR
+________ TestQueryComplexityAnalyzer.test_level_determination_profundo _________
+tests/unit/test_query_complexity_analyzer.py:249: in test_level_determination_profundo
+    assert level == ThinkingLevel.PROFUNDO
+E   assert <ThinkingLevel.ESTANDAR: 2> == <ThinkingLevel.PROFUNDO: 3>
+E    +  where <ThinkingLevel.PROFUNDO: 3> = ThinkingLevel.PROFUNDO
+_________ TestQueryComplexityAnalyzer.test_level_determination_maximo __________
+tests/unit/test_query_complexity_analyzer.py:254: in test_level_determination_maximo
+    assert level == ThinkingLevel.MAXIMO
+E   assert <ThinkingLevel.PROFUNDO: 3> == <ThinkingLevel.MAXIMO: 4>
+E    +  where <ThinkingLevel.MAXIMO: 4> = ThinkingLevel.MAXIMO
+_____________ TestConfidenceEvaluator.test_evaluate_long_response ______________
+tests/unit/test_self_refining_engine.py:122: in test_evaluate_long_response
+    assert confidence < 0.5  # Demasiado largo reduce confianza
+    ^^^^^^^^^^^^^^^^^^^^^^^
+E   assert 0.5 < 0.5
+__________ TestSelfRefiningEngine.test_refine_max_iterations_reached ___________
+tests/unit/test_self_refining_engine.py:312: in test_refine_max_iterations_reached
+    assert result.iterations_used == engine.max_iterations
+E   AssertionError: assert 2 == 3
+E    +  where 2 = RefinementResult(final_answer='Initial [Expandiendo respuesta...] [Expandiendo respuesta...]', iterations=[RefinementIteration(iteration_number=1, draft='Initial [Expandiendo respuesta...]', confidence_score=0.45, issues_detected=['Respuesta muy corta'], improvements_made=[], time_taken_ms=0.062465667724609375, status=<RefinementStatus.COMPLETED: 'completed'>, timestamp=datetime.datetime(2026, 4, 6, 22, 26, 35, 723763)), RefinementIteration(iteration_number=2, draft='Initial [Expandiendo respuesta...] [Expandiendo respuesta...]', confidence_score=0.45, issues_detected=['Respuesta muy corta'], improvements_made=[], time_taken_ms=0.031948089599609375, status=<RefinementStatus.COMPLETED: 'completed'>, timestamp=datetime.datetime(2026, 4, 6, 22, 26, 35, 723810))], total_time_ms=0.16, final_confidence=0.45, max_confidence_reached=0.45, iterations_used=2, max_iterations_allowed=3, confidence_threshold=1.0, early_stopped=False, reasoning='Iteraci\xf3n 1: 1 issues corregidos | Iteraci\xf3n 2: 1 issues corregidos | Iteraci\xf3n 3: M\xe1ximo iteraciones alcanzado (confianza: 0.45)').iterations_used
+E    +  and   3 = <src.features.self_refining_engine.SelfRefiningEngine object at 0x767b7aecf0>.max_iterations
+________________ TestSwarmManagerSearch.test_swarm_search_basic ________________
+async def functions are not natively supported.
+You need to install a suitable plugin for your async framework, for example:
+  - anyio
+  - pytest-asyncio
+  - pytest-tornasync
+  - pytest-trio
+  - pytest-twisted
+________ TestSwarmManagerSearch.test_swarm_search_with_specific_agents _________
+async def functions are not natively supported.
+You need to install a suitable plugin for your async framework, for example:
+  - anyio
+  - pytest-asyncio
+  - pytest-tornasync
+  - pytest-trio
+  - pytest-twisted
+____________ TestSwarmManagerSearch.test_swarm_search_deduplication ____________
+async def functions are not natively supported.
+You need to install a suitable plugin for your async framework, for example:
+  - anyio
+  - pytest-asyncio
+  - pytest-tornasync
+  - pytest-trio
+  - pytest-twisted
+_____ TestSwarmManagerSearch.test_swarm_search_results_sorted_by_relevance _____
+async def functions are not natively supported.
+You need to install a suitable plugin for your async framework, for example:
+  - anyio
+  - pytest-asyncio
+  - pytest-tornasync
+  - pytest-trio
+  - pytest-twisted
+_____________ TestSwarmManagerSearch.test_swarm_search_empty_query _____________
+async def functions are not natively supported.
+You need to install a suitable plugin for your async framework, for example:
+  - anyio
+  - pytest-asyncio
+  - pytest-tornasync
+  - pytest-trio
+  - pytest-twisted
+_______ TestSwarmManagerSearch.test_swarm_search_thermal_status_included _______
+async def functions are not natively supported.
+You need to install a suitable plugin for your async framework, for example:
+  - anyio
+  - pytest-asyncio
+  - pytest-tornasync
+  - pytest-trio
+  - pytest-twisted
+_________ TestSwarmManagerStats.test_swarm_manager_stats_after_search __________
+async def functions are not natively supported.
+You need to install a suitable plugin for your async framework, for example:
+  - anyio
+  - pytest-asyncio
+  - pytest-tornasync
+  - pytest-trio
+  - pytest-twisted
+_________ TestSwarmManagerEdgeCases.test_swarm_search_very_long_query __________
+async def functions are not natively supported.
+You need to install a suitable plugin for your async framework, for example:
+  - anyio
+  - pytest-asyncio
+  - pytest-tornasync
+  - pytest-trio
+  - pytest-twisted
+________ TestSwarmManagerEdgeCases.test_swarm_search_special_characters ________
+async def functions are not natively supported.
+You need to install a suitable plugin for your async framework, for example:
+  - anyio
+  - pytest-asyncio
+  - pytest-tornasync
+  - pytest-trio
+  - pytest-twisted
+_____________ TestSwarmManagerEdgeCases.test_swarm_search_unicode ______________
+async def functions are not natively supported.
+You need to install a suitable plugin for your async framework, for example:
+  - anyio
+  - pytest-asyncio
+  - pytest-tornasync
+  - pytest-trio
+  - pytest-twisted
+___________ TestSwarmManagerEdgeCases.test_swarm_search_single_agent ___________
+async def functions are not natively supported.
+You need to install a suitable plugin for your async framework, for example:
+  - anyio
+  - pytest-asyncio
+  - pytest-tornasync
+  - pytest-trio
+  - pytest-twisted
+__________ TestSwarmManagerEdgeCases.test_swarm_search_multiple_times __________
+async def functions are not natively supported.
+You need to install a suitable plugin for your async framework, for example:
+  - anyio
+  - pytest-asyncio
+  - pytest-tornasync
+  - pytest-trio
+  - pytest-twisted
+=============================== warnings summary ===============================
+tests/test_thermal_swarm.py:176
+  /root/claw-lite-ultra-pro/tests/test_thermal_swarm.py:176: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/test_thermal_swarm.py:192
+  /root/claw-lite-ultra-pro/tests/test_thermal_swarm.py:192: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/test_thermal_swarm.py:208
+  /root/claw-lite-ultra-pro/tests/test_thermal_swarm.py:208: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/test_thermal_swarm.py:225
+  /root/claw-lite-ultra-pro/tests/test_thermal_swarm.py:225: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/test_thermal_swarm.py:241
+  /root/claw-lite-ultra-pro/tests/test_thermal_swarm.py:241: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/test_thermal_swarm.py:265
+  /root/claw-lite-ultra-pro/tests/test_thermal_swarm.py:265: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/test_thermal_swarm.py:288
+  /root/claw-lite-ultra-pro/tests/test_thermal_swarm.py:288: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/test_thermal_swarm.py:299
+  /root/claw-lite-ultra-pro/tests/test_thermal_swarm.py:299: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/test_thermal_swarm.py:317
+  /root/claw-lite-ultra-pro/tests/test_thermal_swarm.py:317: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/test_thermal_swarm.py:340
+  /root/claw-lite-ultra-pro/tests/test_thermal_swarm.py:340: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/test_thermal_swarm.py:346
+  /root/claw-lite-ultra-pro/tests/test_thermal_swarm.py:346: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/test_thermal_swarm.py:356
+  /root/claw-lite-ultra-pro/tests/test_thermal_swarm.py:356: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/unit/test_swarm_manager.py:178
+  /root/claw-lite-ultra-pro/tests/unit/test_swarm_manager.py:178: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/unit/test_swarm_manager.py:191
+  /root/claw-lite-ultra-pro/tests/unit/test_swarm_manager.py:191: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/unit/test_swarm_manager.py:200
+  /root/claw-lite-ultra-pro/tests/unit/test_swarm_manager.py:200: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/unit/test_swarm_manager.py:213
+  /root/claw-lite-ultra-pro/tests/unit/test_swarm_manager.py:213: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/unit/test_swarm_manager.py:223
+  /root/claw-lite-ultra-pro/tests/unit/test_swarm_manager.py:223: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/unit/test_swarm_manager.py:231
+  /root/claw-lite-ultra-pro/tests/unit/test_swarm_manager.py:231: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/unit/test_swarm_manager.py:256
+  /root/claw-lite-ultra-pro/tests/unit/test_swarm_manager.py:256: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/unit/test_swarm_manager.py:289
+  /root/claw-lite-ultra-pro/tests/unit/test_swarm_manager.py:289: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/unit/test_swarm_manager.py:298
+  /root/claw-lite-ultra-pro/tests/unit/test_swarm_manager.py:298: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/unit/test_swarm_manager.py:306
+  /root/claw-lite-ultra-pro/tests/unit/test_swarm_manager.py:306: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/unit/test_swarm_manager.py:314
+  /root/claw-lite-ultra-pro/tests/unit/test_swarm_manager.py:314: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/unit/test_swarm_manager.py:323
+  /root/claw-lite-ultra-pro/tests/unit/test_swarm_manager.py:323: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/unit/test_gateway.py::TestGatewayAuth::test_generate_token_returns_string
+tests/unit/test_gateway.py::TestGatewayAuth::test_verify_valid_token
+tests/unit/test_gateway.py::TestGatewayAuth::test_token_contains_required_claims
+tests/unit/test_gateway.py::TestGatewayIntegration::test_full_auth_flow
+tests/unit/test_gateway.py::TestGatewayIntegration::test_rate_limit_with_auth
+tests/unit/test_gateway.py::TestGatewayIntegration::test_security_chain
+  /root/claw-lite-ultra-pro/tests/unit/test_gateway.py:60: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    "exp": datetime.utcnow() + timedelta(hours=24),
+
+tests/unit/test_gateway.py::TestGatewayAuth::test_generate_token_returns_string
+tests/unit/test_gateway.py::TestGatewayAuth::test_verify_valid_token
+tests/unit/test_gateway.py::TestGatewayAuth::test_token_contains_required_claims
+tests/unit/test_gateway.py::TestGatewayIntegration::test_full_auth_flow
+tests/unit/test_gateway.py::TestGatewayIntegration::test_rate_limit_with_auth
+tests/unit/test_gateway.py::TestGatewayIntegration::test_security_chain
+  /root/claw-lite-ultra-pro/tests/unit/test_gateway.py:61: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    "iat": datetime.utcnow()
+
+tests/unit/test_gateway.py::TestGatewayAuth::test_verify_expired_token
+  /root/claw-lite-ultra-pro/tests/unit/test_gateway.py:171: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    "exp": datetime.utcnow() - timedelta(hours=1),  # Expirado
+
+tests/unit/test_gateway.py::TestGatewayAuth::test_verify_expired_token
+  /root/claw-lite-ultra-pro/tests/unit/test_gateway.py:172: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    "iat": datetime.utcnow() - timedelta(hours=25)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/integration/test_integration.py::TestErrorHandling::test_malicious_query_handling - AssertionError: assert True is False
+ +  where True = RouterResult(intent='fallback', action='dispatch', data={'agent': 'swarm_manager', 'action': 'multi_agent_search', 'query': 'alert(1)', 'status': 'pending', 'reason': 'fallback'}, success=True, error=None, metadata={}, processing_time_ms=17.91691780090332).success
+FAILED tests/integration/test_integration.py::TestStatsAndMonitoring::test_engine_stats - AssertionError: assert 'total_queries' in {'initialized': False, 'models_loaded': False, 'short_circuit_threshold': 0.95, 'levels_enabled': {'regex': False, 'fuzzy': False, 'semantic': False, 'expert': False}}
+FAILED tests/integration/test_v4_integration.py::TestV4Integration::test_end_to_end_query_processing - AssertionError: assert False
+ +  where False = is_enabled('adaptive_thinking')
+ +    where is_enabled = <src.features.feature_flags.FeatureFlagsManager object at 0x767c413a10>.is_enabled
+FAILED tests/integration/test_v4_integration.py::TestSecurityAnalystIntegration::test_security_analyst_basic - AttributeError: 'SecurityReport' object has no attribute 'score'
+FAILED tests/integration/test_v4_integration.py::TestKairosDaemonIntegration::test_kairos_daemon_basic - AttributeError: 'KairosDaemon' object has no attribute 'is_running'
+FAILED tests/integration/test_v4_integration.py::TestContextManagerIntegration::test_context_manager_basic - AttributeError: 'ContextManager' object has no attribute 'add_message'
+FAILED tests/test_code_integrity.py::TestCodeIntegrity::test_checker_initialization - ImportError: cannot import name 'CodeIntegrityChecker' from 'src.security.code_integrity' (/root/claw-lite-ultra-pro/tests/integration/../../src/security/code_integrity.py)
+FAILED tests/test_code_integrity.py::TestCodeIntegrity::test_calculate_hash - ImportError: cannot import name 'CodeIntegrityChecker' from 'src.security.code_integrity' (/root/claw-lite-ultra-pro/tests/integration/../../src/security/code_integrity.py)
+FAILED tests/test_code_integrity.py::TestCodeIntegrity::test_verify_file_integrity - ImportError: cannot import name 'CodeIntegrityChecker' from 'src.security.code_integrity' (/root/claw-lite-ultra-pro/tests/integration/../../src/security/code_integrity.py)
+FAILED tests/test_code_integrity.py::TestCodeIntegrity::test_detect_tampering - ImportError: cannot import name 'CodeIntegrityChecker' from 'src.security.code_integrity' (/root/claw-lite-ultra-pro/tests/integration/../../src/security/code_integrity.py)
+FAILED tests/test_code_integrity.py::TestCodeIntegrity::test_check_imports_whitelist - ImportError: cannot import name 'CodeIntegrityChecker' from 'src.security.code_integrity' (/root/claw-lite-ultra-pro/tests/integration/../../src/security/code_integrity.py)
+FAILED tests/test_code_integrity.py::TestCodeIntegrity::test_detect_dangerous_imports - ImportError: cannot import name 'CodeIntegrityChecker' from 'src.security.code_integrity' (/root/claw-lite-ultra-pro/tests/integration/../../src/security/code_integrity.py)
+FAILED tests/test_code_integrity.py::TestCodeIntegrity::test_get_stats - ImportError: cannot import name 'CodeIntegrityChecker' from 'src.security.code_integrity' (/root/claw-lite-ultra-pro/tests/integration/../../src/security/code_integrity.py)
+FAILED tests/test_hybrid_engine.py::TestHybridEngine::test_process_with_empty_query - AssertionError: assert ('fallback' == 'unknown'
+  
+  - unknown
+  + fallback or 0.5 == 0.0)
+ +  where 0.5 = IntentResult(intent_name='fallback', confidence=0.5, level_reached=4, metadata={'level': 'expert', 'fallback_type': 'agent', 'fallback_details': {}, 'reason': 'No se pudo determinar intenci\xf3n clara'}).confidence
+FAILED tests/test_sandbox_executor.py::TestSandboxExecutor::test_execute_safe_code - AttributeError: 'ExecutionResult' object has no attribute 'success'
+FAILED tests/test_sandbox_executor.py::TestSandboxExecutor::test_block_dangerous_imports - AttributeError: 'ExecutionResult' object has no attribute 'success'
+FAILED tests/test_sandbox_executor.py::TestSandboxExecutor::test_execution_timeout - TypeError: SandboxExecutor.__init__() got an unexpected keyword argument 'timeout'
+FAILED tests/test_sandbox_executor.py::TestSandboxExecutor::test_memory_limit - TypeError: SandboxExecutor.__init__() got an unexpected keyword argument 'max_memory_mb'
+FAILED tests/test_sandbox_executor.py::TestSandboxExecutor::test_allowed_imports - AttributeError: 'ExecutionResult' object has no attribute 'success'
+FAILED tests/test_sandbox_executor.py::TestSandboxExecutor::test_get_stats - AttributeError: 'SandboxExecutor' object has no attribute 'get_stats'
+FAILED tests/test_sandbox_executor.py::TestSandboxExecutor::test_execute_with_custom_globals - TypeError: SandboxExecutor.execute() got an unexpected keyword argument 'custom_globals'
+FAILED tests/test_sandbox_executor.py::TestSandboxExecutor::test_code_validation - AttributeError: 'ExecutionResult' object has no attribute 'success'
+FAILED tests/test_semantic_engine.py::TestSemanticEngine::test_engine_initialization - ModuleNotFoundError: No module named 'numpy'
+FAILED tests/test_semantic_engine.py::TestSemanticEngine::test_tokenize_basic - ModuleNotFoundError: No module named 'numpy'
+FAILED tests/test_semantic_engine.py::TestSemanticEngine::test_tokenize_removes_stopwords - ModuleNotFoundError: No module named 'numpy'
+FAILED tests/test_semantic_engine.py::TestSemanticEngine::test_similarity_calculation - ModuleNotFoundError: No module named 'numpy'
+FAILED tests/test_semantic_engine.py::TestSemanticEngine::test_similarity_different_vectors - ModuleNotFoundError: No module named 'numpy'
+FAILED tests/test_semantic_engine.py::TestSemanticEngine::test_match_without_model - ModuleNotFoundError: No module named 'numpy'
+FAILED tests/test_semantic_engine.py::TestSemanticEngine::test_model_loading_failure - ModuleNotFoundError: No module named 'numpy'
+FAILED tests/test_semantic_engine.py::TestSemanticEngine::test_unload_model - ModuleNotFoundError: No module named 'numpy'
+FAILED tests/test_semantic_engine.py::TestSemanticEngine::test_get_stats - ModuleNotFoundError: No module named 'numpy'
+FAILED tests/test_swarm.py::TestSwarmManager::test_manager_initialization - AttributeError: 'SwarmManager' object has no attribute 'max_agents'
+FAILED tests/test_swarm.py::TestSwarmManager::test_thermal_guard_check - AttributeError: <src.agents.swarm_manager.SwarmManager object at 0x767c4ac690> does not have the attribute '_get_system_temp'
+FAILED tests/test_swarm.py::TestSwarmManager::test_dispatch_single_agent - AttributeError: 'SwarmManager' object has no attribute 'dispatch'
+FAILED tests/test_swarm.py::TestSwarmManager::test_max_agents_limit - AttributeError: 'SwarmManager' object has no attribute 'dispatch'
+FAILED tests/test_swarm.py::TestSwarmManager::test_get_active_agents_count - AttributeError: 'SwarmManager' object has no attribute 'get_active_agents_count'
+FAILED tests/test_swarm.py::TestSwarmManager::test_shutdown_all_agents - AttributeError: 'SwarmManager' object has no attribute 'shutdown_all'
+FAILED tests/test_swarm.py::TestSwarmManager::test_get_stats - AttributeError: 'dict' object has no attribute 'temp_threshold_critical'
+FAILED tests/test_swarm.py::TestSwarmManager::test_agent_timeout - AttributeError: 'SwarmManager' object has no attribute 'dispatch'
+FAILED tests/test_termux_compatibility.py::TestMobileOptimizations::test_short_circuit_evaluation - TypeError: HybridEngine.__init__() missing 1 required positional argument: 'config'
+FAILED tests/test_termux_compatibility.py::TestMobileOptimizations::test_thermal_guard_activation - ImportError: cannot import name 'ThermalMonitor' from 'src.monitoring.thermal_monitor' (/root/claw-lite-ultra-pro/tests/integration/../../src/monitoring/thermal_monitor.py)
+FAILED tests/test_termux_compatibility.py::TestMobileOptimizations::test_resource_monitoring - ImportError: cannot import name 'ResourceMonitor' from 'src.monitoring.resource_monitor' (/root/claw-lite-ultra-pro/tests/integration/../../src/monitoring/resource_monitor.py)
+FAILED tests/test_termux_compatibility.py::TestSecurityConstraints::test_no_eval_usage - AssertionError: eval() encontrado en src/code_gen/buddy_reviewer.py fuera de sandbox
+assert ('sandbox' in 'src/code_gen/buddy_reviewer.py' or 'safe' in 'src/code_gen/buddy_reviewer.py')
+ +  where 'src/code_gen/buddy_reviewer.py' = str(PosixPath('src/code_gen/buddy_reviewer.py'))
+ +  and   'src/code_gen/buddy_reviewer.py' = str(PosixPath('src/code_gen/buddy_reviewer.py'))
+FAILED tests/test_termux_compatibility.py::TestSecurityConstraints::test_no_exec_usage - AssertionError: exec() encontrado en src/code_gen/buddy_reviewer.py fuera de sandbox
+assert ('sandbox' in 'src/code_gen/buddy_reviewer.py' or 'safe' in 'src/code_gen/buddy_reviewer.py')
+ +  where 'src/code_gen/buddy_reviewer.py' = str(PosixPath('src/code_gen/buddy_reviewer.py'))
+ +  and   'src/code_gen/buddy_reviewer.py' = str(PosixPath('src/code_gen/buddy_reviewer.py'))
+FAILED tests/test_termux_compatibility.py::TestSecurityConstraints::test_sandbox_restrictions - AssertionError: assert False
+ +  where False = hasattr(<src.code_gen.sandbox_executor.SandboxExecutor object at 0x767b760650>, 'ALLOWED_IMPORTS')
+FAILED tests/test_termux_compatibility.py::TestPerformanceConstraints::test_regex_engine_speed - TypeError: RegexEngine.__init__() missing 1 required positional argument: 'intents_registry'
+FAILED tests/test_termux_compatibility.py::TestPerformanceConstraints::test_fuzzy_engine_speed - TypeError: FuzzyEngine.__init__() missing 1 required positional argument: 'intents_registry'
+FAILED tests/test_termux_compatibility.py::TestPerformanceConstraints::test_memory_footprint - ModuleNotFoundError: No module named 'psutil'
+FAILED tests/test_thermal_swarm.py::TestSwarmManager::test_execute_swarm_with_agents - Failed: async def functions are not natively supported.
+You need to install a suitable plugin for your async framework, for example:
+  - anyio
+  - pytest-asyncio
+  - pytest-tornasync
+  - pytest-trio
+  - pytest-twisted
+FAILED tests/test_thermal_swarm.py::TestSwarmManager::test_execute_swarm_respects_thermal_limit - Failed: async def functions are not natively supported.
+You need to install a suitable plugin for your async framework, for example:
+  - anyio
+  - pytest-asyncio
+  - pytest-tornasync
+  - pytest-trio
+  - pytest-twisted
+FAILED tests/test_thermal_swarm.py::TestSwarmManager::test_execute_swarm_at_critical_temp - Failed: async def functions are not natively supported.
+You need to install a suitable plugin for your async framework, for example:
+  - anyio
+  - pytest-asyncio
+  - pytest-tornasync
+  - pytest-trio
+  - pytest-twisted
+FAILED tests/test_thermal_swarm.py::TestSwarmManager::test_execution_log - Failed: async def functions are not natively supported.
+You need to install a suitable plugin for your async framework, for example:
+  - anyio
+  - pytest-asyncio
+  - pytest-tornasync
+  - pytest-trio
+  - pytest-twisted
+FAILED tests/test_thermal_swarm.py::TestSwarmManager::test_multiple_swarm_executions - Failed: async def functions are not natively supported.
+You need to install a suitable plugin for your async framework, for example:
+  - anyio
+  - pytest-asyncio
+  - pytest-tornasync
+  - pytest-trio
+  - pytest-twisted
+FAILED tests/test_thermal_swarm.py::TestThermalSwarmIntegration::test_dynamic_throttling - Failed: async def functions are not natively supported.
+You need to install a suitable plugin for your async framework, for example:
+  - anyio
+  - pytest-asyncio
+  - pytest-tornasync
+  - pytest-trio
+  - pytest-twisted
+FAILED tests/test_thermal_swarm.py::TestThermalSwarmIntegration::test_graceful_degradation - Failed: async def functions are not natively supported.
+You need to install a suitable plugin for your async framework, for example:
+  - anyio
+  - pytest-asyncio
+  - pytest-tornasync
+  - pytest-trio
+  - pytest-twisted
+FAILED tests/test_thermal_swarm.py::TestThermalSwarmIntegration::test_recovery_after_cooling - Failed: async def functions are not natively supported.
+You need to install a suitable plugin for your async framework, for example:
+  - anyio
+  - pytest-asyncio
+  - pytest-tornasync
+  - pytest-trio
+  - pytest-twisted
+FAILED tests/test_thermal_swarm.py::TestThermalSwarmIntegration::test_concurrent_execution_with_thermal_control - Failed: async def functions are not natively supported.
+You need to install a suitable plugin for your async framework, for example:
+  - anyio
+  - pytest-asyncio
+  - pytest-tornasync
+  - pytest-trio
+  - pytest-twisted
+FAILED tests/test_thermal_swarm.py::TestEdgeCases::test_empty_swarm - Failed: async def functions are not natively supported.
+You need to install a suitable plugin for your async framework, for example:
+  - anyio
+  - pytest-asyncio
+  - pytest-tornasync
+  - pytest-trio
+  - pytest-twisted
+FAILED tests/test_thermal_swarm.py::TestEdgeCases::test_single_agent_swarm - Failed: async def functions are not natively supported.
+You need to install a suitable plugin for your async framework, for example:
+  - anyio
+  - pytest-asyncio
+  - pytest-tornasync
+  - pytest-trio
+  - pytest-twisted
+FAILED tests/test_thermal_swarm.py::TestEdgeCases::test_agent_failure_handling - Failed: async def functions are not natively supported.
+You need to install a suitable plugin for your async framework, for example:
+  - anyio
+  - pytest-asyncio
+  - pytest-tornasync
+  - pytest-trio
+  - pytest-twisted
+FAILED tests/test_vector_store_sqlite.py::TestVectorStoreSQLite::test_store_initialization - ImportError: cannot import name 'VectorStoreSQLite' from 'src.persistence.vector_store_sqlite' (/root/claw-lite-ultra-pro/tests/integration/../../src/persistence/vector_store_sqlite.py)
+FAILED tests/test_vector_store_sqlite.py::TestVectorStoreSQLite::test_add_vector - ImportError: cannot import name 'VectorStoreSQLite' from 'src.persistence.vector_store_sqlite' (/root/claw-lite-ultra-pro/tests/integration/../../src/persistence/vector_store_sqlite.py)
+FAILED tests/test_vector_store_sqlite.py::TestVectorStoreSQLite::test_search_vectors - ImportError: cannot import name 'VectorStoreSQLite' from 'src.persistence.vector_store_sqlite' (/root/claw-lite-ultra-pro/tests/integration/../../src/persistence/vector_store_sqlite.py)
+FAILED tests/test_vector_store_sqlite.py::TestVectorStoreSQLite::test_get_vector_by_id - ImportError: cannot import name 'VectorStoreSQLite' from 'src.persistence.vector_store_sqlite' (/root/claw-lite-ultra-pro/tests/integration/../../src/persistence/vector_store_sqlite.py)
+FAILED tests/test_vector_store_sqlite.py::TestVectorStoreSQLite::test_delete_vector - ImportError: cannot import name 'VectorStoreSQLite' from 'src.persistence.vector_store_sqlite' (/root/claw-lite-ultra-pro/tests/integration/../../src/persistence/vector_store_sqlite.py)
+FAILED tests/test_vector_store_sqlite.py::TestVectorStoreSQLite::test_update_vector - ImportError: cannot import name 'VectorStoreSQLite' from 'src.persistence.vector_store_sqlite' (/root/claw-lite-ultra-pro/tests/integration/../../src/persistence/vector_store_sqlite.py)
+FAILED tests/test_vector_store_sqlite.py::TestVectorStoreSQLite::test_get_stats - ImportError: cannot import name 'VectorStoreSQLite' from 'src.persistence.vector_store_sqlite' (/root/claw-lite-ultra-pro/tests/integration/../../src/persistence/vector_store_sqlite.py)
+FAILED tests/test_vector_store_sqlite.py::TestVectorStoreSQLite::test_clear_store - ImportError: cannot import name 'VectorStoreSQLite' from 'src.persistence.vector_store_sqlite' (/root/claw-lite-ultra-pro/tests/integration/../../src/persistence/vector_store_sqlite.py)
+FAILED tests/test_vector_store_sqlite.py::TestVectorStoreSQLite::test_batch_add_vectors - ImportError: cannot import name 'VectorStoreSQLite' from 'src.persistence.vector_store_sqlite' (/root/claw-lite-ultra-pro/tests/integration/../../src/persistence/vector_store_sqlite.py)
+FAILED tests/unit/test_feature_flags.py::TestFeatureFlagsManager::test_is_feature_enabled_default - AssertionError: assert True is False
+ +  where True = is_enabled('query_complexity_analyzer')
+ +    where is_enabled = <src.features.feature_flags.FeatureFlagsManager object at 0x767c29f230>.is_enabled
+FAILED tests/unit/test_gateway.py::TestGatewaySanitization::test_sanitize_removes_html_tags - assert '<script>' not in "<script>alert('xss')</script>Hello"
+  
+  '<script>' is contained here:
+    <script>alert('xss')</script>Hello
+  ? ++++++++
+FAILED tests/unit/test_gateway.py::TestGatewayAuth::test_verify_valid_token - KeyError: 'user_id'
+FAILED tests/unit/test_gateway.py::TestGatewayAuth::test_verify_expired_token - assert True is False
+FAILED tests/unit/test_gateway.py::TestGatewayAuth::test_verify_invalid_token - assert True is False
+FAILED tests/unit/test_gateway.py::TestGatewayAuth::test_token_contains_required_claims - AssertionError: assert 'user_id' in {'user': 'mock_user', 'role': 'user'}
+FAILED tests/unit/test_gateway.py::TestGatewayIntegration::test_full_auth_flow - KeyError: 'user_id'
+FAILED tests/unit/test_gateway.py::TestGatewayIntegration::test_security_chain - assert '<script>' not in "<script>alert('xss')</script>buscar precios"
+  
+  '<script>' is contained here:
+    <script>alert('xss')</script>buscar precios
+  ? ++++++++
+FAILED tests/unit/test_query_complexity_analyzer.py::TestQueryComplexityAnalyzer::test_analyze_code_generation - AssertionError: assert <ThinkingLevel.RAPIDO: 1> in [<ThinkingLevel.ESTANDAR: 2>, <ThinkingLevel.PROFUNDO: 3>]
+ +  where <ThinkingLevel.RAPIDO: 1> = ComplexityScore(score=1.23, level=<ThinkingLevel.RAPIDO: 1>, factors={'length': 0.5, 'keywords': 2.5, 'operators': 0.0, 'multi_step': 0.0, 'task_type': 2.0, 'syntax': 0.0}, confidence=0.95, reasoning='1 palabras complejas detectadas | 1 keywords de c\xf3digo detectadas | Generaci\xf3n de c\xf3digo solicitada').level
+FAILED tests/unit/test_query_complexity_analyzer.py::TestQueryComplexityAnalyzer::test_analyze_complex_analysis - AssertionError: assert <ThinkingLevel.RAPIDO: 1> in [<ThinkingLevel.PROFUNDO: 3>, <ThinkingLevel.MAXIMO: 4>]
+ +  where <ThinkingLevel.RAPIDO: 1> = ComplexityScore(score=1.52, level=<ThinkingLevel.RAPIDO: 1>, factors={'length': 1.0, 'keywords': 3.0, 'operators': 0.5, 'multi_step': 0.0, 'task_type': 2.0, 'syntax': 0.0}, confidence=0.95, reasoning='Longitud: media (75 chars) | 3 palabras complejas detectadas | Operadores: y(1) | Generaci\xf3n de c\xf3digo solicitada').level
+FAILED tests/unit/test_query_complexity_analyzer.py::TestQueryComplexityAnalyzer::test_analyze_multi_step_task - assert <ThinkingLevel.RAPIDO: 1> in [<ThinkingLevel.PROFUNDO: 3>, <ThinkingLevel.MAXIMO: 4>]
+ +  where <ThinkingLevel.RAPIDO: 1> = ComplexityScore(score=3.56, level=<ThinkingLevel.RAPIDO: 1>, factors={'length': 1.5, 'keywords': 6.5, 'operators': 2.6, 'multi_step': 3.9, 'task_type': 2.0, 'syntax': 0.3}, confidence=0.75, reasoning="Longitud: alta (111 chars) | 2 palabras complejas detectadas | 3 keywords de c\xf3digo detectadas | Operadores: y(1), luego(1), primero(1), finalmente(1) | Indicador: 'primero' | Indicador: 'luego' | Indicador: 'finalmente' | Indicador: 'fin' | 3 palabras de secuencia | Generaci\xf3n de c\xf3digo solicitada | 3 cl\xe1usulas").level
+FAILED tests/unit/test_query_complexity_analyzer.py::TestQueryComplexityAnalyzer::test_analyze_debugging_task - AssertionError: assert <ThinkingLevel.RAPIDO: 1> in [<ThinkingLevel.ESTANDAR: 2>, <ThinkingLevel.PROFUNDO: 3>]
+ +  where <ThinkingLevel.RAPIDO: 1> = ComplexityScore(score=1.64, level=<ThinkingLevel.RAPIDO: 1>, factors={'length': 0.5, 'keywords': 4.0, 'operators': 0.0, 'multi_step': 0.0, 'task_type': 1.8, 'syntax': 0.0}, confidence=0.95, reasoning='1 palabras complejas detectadas | 2 keywords de c\xf3digo detectadas | Debugging/optimizaci\xf3n solicitada').level
+FAILED tests/unit/test_query_complexity_analyzer.py::TestQueryComplexityAnalyzer::test_level_determination_estandar - assert <ThinkingLevel.RAPIDO: 1> == <ThinkingLevel.ESTANDAR: 2>
+ +  where <ThinkingLevel.ESTANDAR: 2> = ThinkingLevel.ESTANDAR
+FAILED tests/unit/test_query_complexity_analyzer.py::TestQueryComplexityAnalyzer::test_level_determination_profundo - assert <ThinkingLevel.ESTANDAR: 2> == <ThinkingLevel.PROFUNDO: 3>
+ +  where <ThinkingLevel.PROFUNDO: 3> = ThinkingLevel.PROFUNDO
+FAILED tests/unit/test_query_complexity_analyzer.py::TestQueryComplexityAnalyzer::test_level_determination_maximo - assert <ThinkingLevel.PROFUNDO: 3> == <ThinkingLevel.MAXIMO: 4>
+ +  where <ThinkingLevel.MAXIMO: 4> = ThinkingLevel.MAXIMO
+FAILED tests/unit/test_self_refining_engine.py::TestConfidenceEvaluator::test_evaluate_long_response - assert 0.5 < 0.5
+FAILED tests/unit/test_self_refining_engine.py::TestSelfRefiningEngine::test_refine_max_iterations_reached - AssertionError: assert 2 == 3
+ +  where 2 = RefinementResult(final_answer='Initial [Expandiendo respuesta...] [Expandiendo respuesta...]', iterations=[RefinementIteration(iteration_number=1, draft='Initial [Expandiendo respuesta...]', confidence_score=0.45, issues_detected=['Respuesta muy corta'], improvements_made=[], time_taken_ms=0.062465667724609375, status=<RefinementStatus.COMPLETED: 'completed'>, timestamp=datetime.datetime(2026, 4, 6, 22, 26, 35, 723763)), RefinementIteration(iteration_number=2, draft='Initial [Expandiendo respuesta...] [Expandiendo respuesta...]', confidence_score=0.45, issues_detected=['Respuesta muy corta'], improvements_made=[], time_taken_ms=0.031948089599609375, status=<RefinementStatus.COMPLETED: 'completed'>, timestamp=datetime.datetime(2026, 4, 6, 22, 26, 35, 723810))], total_time_ms=0.16, final_confidence=0.45, max_confidence_reached=0.45, iterations_used=2, max_iterations_allowed=3, confidence_threshold=1.0, early_stopped=False, reasoning='Iteraci\xf3n 1: 1 issues corregidos | Iteraci\xf3n 2: 1 issues corregidos | Iteraci\xf3n 3: M\xe1ximo iteraciones alcanzado (confianza: 0.45)').iterations_used
+ +  and   3 = <src.features.self_refining_engine.SelfRefiningEngine object at 0x767b7aecf0>.max_iterations
+FAILED tests/unit/test_swarm_manager.py::TestSwarmManagerSearch::test_swarm_search_basic - Failed: async def functions are not natively supported.
+You need to install a suitable plugin for your async framework, for example:
+  - anyio
+  - pytest-asyncio
+  - pytest-tornasync
+  - pytest-trio
+  - pytest-twisted
+FAILED tests/unit/test_swarm_manager.py::TestSwarmManagerSearch::test_swarm_search_with_specific_agents - Failed: async def functions are not natively supported.
+You need to install a suitable plugin for your async framework, for example:
+  - anyio
+  - pytest-asyncio
+  - pytest-tornasync
+  - pytest-trio
+  - pytest-twisted
+FAILED tests/unit/test_swarm_manager.py::TestSwarmManagerSearch::test_swarm_search_deduplication - Failed: async def functions are not natively supported.
+You need to install a suitable plugin for your async framework, for example:
+  - anyio
+  - pytest-asyncio
+  - pytest-tornasync
+  - pytest-trio
+  - pytest-twisted
+FAILED tests/unit/test_swarm_manager.py::TestSwarmManagerSearch::test_swarm_search_results_sorted_by_relevance - Failed: async def functions are not natively supported.
+You need to install a suitable plugin for your async framework, for example:
+  - anyio
+  - pytest-asyncio
+  - pytest-tornasync
+  - pytest-trio
+  - pytest-twisted
+FAILED tests/unit/test_swarm_manager.py::TestSwarmManagerSearch::test_swarm_search_empty_query - Failed: async def functions are not natively supported.
+You need to install a suitable plugin for your async framework, for example:
+  - anyio
+  - pytest-asyncio
+  - pytest-tornasync
+  - pytest-trio
+  - pytest-twisted
+FAILED tests/unit/test_swarm_manager.py::TestSwarmManagerSearch::test_swarm_search_thermal_status_included - Failed: async def functions are not natively supported.
+You need to install a suitable plugin for your async framework, for example:
+  - anyio
+  - pytest-asyncio
+  - pytest-tornasync
+  - pytest-trio
+  - pytest-twisted
+FAILED tests/unit/test_swarm_manager.py::TestSwarmManagerStats::test_swarm_manager_stats_after_search - Failed: async def functions are not natively supported.
+You need to install a suitable plugin for your async framework, for example:
+  - anyio
+  - pytest-asyncio
+  - pytest-tornasync
+  - pytest-trio
+  - pytest-twisted
+FAILED tests/unit/test_swarm_manager.py::TestSwarmManagerEdgeCases::test_swarm_search_very_long_query - Failed: async def functions are not natively supported.
+You need to install a suitable plugin for your async framework, for example:
+  - anyio
+  - pytest-asyncio
+  - pytest-tornasync
+  - pytest-trio
+  - pytest-twisted
+FAILED tests/unit/test_swarm_manager.py::TestSwarmManagerEdgeCases::test_swarm_search_special_characters - Failed: async def functions are not natively supported.
+You need to install a suitable plugin for your async framework, for example:
+  - anyio
+  - pytest-asyncio
+  - pytest-tornasync
+  - pytest-trio
+  - pytest-twisted
+FAILED tests/unit/test_swarm_manager.py::TestSwarmManagerEdgeCases::test_swarm_search_unicode - Failed: async def functions are not natively supported.
+You need to install a suitable plugin for your async framework, for example:
+  - anyio
+  - pytest-asyncio
+  - pytest-tornasync
+  - pytest-trio
+  - pytest-twisted
+FAILED tests/unit/test_swarm_manager.py::TestSwarmManagerEdgeCases::test_swarm_search_single_agent - Failed: async def functions are not natively supported.
+You need to install a suitable plugin for your async framework, for example:
+  - anyio
+  - pytest-asyncio
+  - pytest-tornasync
+  - pytest-trio
+  - pytest-twisted
+FAILED tests/unit/test_swarm_manager.py::TestSwarmManagerEdgeCases::test_swarm_search_multiple_times - Failed: async def functions are not natively supported.
+You need to install a suitable plugin for your async framework, for example:
+  - anyio
+  - pytest-asyncio
+  - pytest-tornasync
+  - pytest-trio
+  - pytest-twisted
+=========== 98 failed, 255 passed, 1 skipped, 38 warnings in 13.42s ============

@@ -1,0 +1,39 @@
+# Claw-Litle 1.0 "1.0"
+# Dependencias generales (Desarrollo en PC/Laptop)
+# Para Termux usar requirements-termux.txt
+
+# Core
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+rich>=13.7.0
+click>=8.1.0
+
+# HTTP/Network
+httpx>=0.25.0
+urllib3>=2.0.0
+certifi>=2021.0.0
+
+# Parsing/Scraping
+lxml>=4.9.0
+soupsieve>=2.5
+
+# Templates/Code Generation
+jinja2>=3.1.0
+
+# Data/Utilities
+python-dateutil>=2.8.0
+aiofiles>=21.0.0
+pydantic>=2.5.0
+
+# Bot/Notifications
+python-telegram-bot>=20.7
+
+# Imágenes (solo procesamiento, no GUI)
+pillow>=10.0.0
+
+# ONNX para nivel semántico (solo desarrollo - en Termux es opcional)
+onnxruntime>=1.16.0
+numpy>=1.21.0
+
+# Monitoreo de recursos (solo desarrollo)
+psutil>=5.9.0

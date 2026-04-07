@@ -1,0 +1,88 @@
+{
+  "profile_name": "laptop_pc",
+  "profile_version": "1.0",
+  "description": "Perfil para Laptop/PC de desarrollo - Testing completo",
+  
+  "environment": {
+    "type": "laptop_desktop",
+    "arch": "x86_64",
+    "ram_typical_mb": 16384,
+    "ram_min_mb": 8192,
+    "storage_paths": [
+      "/home/user/clawlite-data/",
+      "/Users/user/clawlite-data/"
+    ],
+    "python_version_min": "3.11",
+    "has_root": true,
+    "has_docker": true,
+    "has_gui_display": true,
+    "cpu_cores_typical": 8,
+    "os_version_min": "Ubuntu 20.04 / macOS 11 / Windows 10"
+  },
+  
+  "capabilities_detected": {
+    "can_compile_c": true,
+    "can_run_docker": true,
+    "can_use_gui": true,
+    "has_internet": true,
+    "has_telegram": true,
+    "max_concurrent_agents": 6,
+    "safe_timeout_seconds": 5,
+    "max_memory_mb": 1000,
+    "supports_async": true,
+    "supports_sqlite": true,
+    "supports_onnx": true
+  },
+  
+  "compatible_libraries": {
+    "allowed": [
+      "requests", "beautifulsoup4", "flask", "fastapi",
+      "sqlite3", "rich", "click", "schedule", "pandas",
+      "python-telegram-bot", "httpx", "pillow",
+      "jinja2", "pydantic", "aiofiles", "python-dateutil",
+      "lxml", "urllib3", "certifi", "charset_normalizer",
+      "idna", "anyio", "sniffio", "typing_extensions",
+      "onnxruntime", "numpy", "scipy", "matplotlib",
+      "seaborn", "scikit-learn", "opencv-python",
+      "tensorflow", "torch", "transformers"
+    ],
+    
+    "problematic": [],
+    
+    "forbidden": [
+      "os.system con shell=True",
+      "subprocess.call con shell=True",
+      "eval() con input de usuario",
+      "exec() con input de usuario"
+    ]
+  },
+  
+  "performance_tuning": {
+    "swarm_max_agents": 6,
+    "model_lazy_load": false,
+    "cache_aggressive": false,
+    "battery_saver_mode": false,
+    "thermal_throttling": false,
+    "memory_optimization": "none",
+    "cpu_affinity": "all"
+  },
+  
+  "paths": {
+    "data_dir": "./clawlite-data/",
+    "cache_dir": "./clawlite-data/cache/",
+    "logs_dir": "./clawlite-data/logs/",
+    "models_dir": "models/keep/",
+    "temp_dir": "./clawlite-data/tmp/"
+  },
+  
+  "limits": {
+    "max_file_size_mb": 500,
+    "max_query_length": 5000,
+    "max_response_length": 50000,
+    "max_concurrent_tasks": 10,
+    "max_retries": 3,
+    "timeout_short_seconds": 2,
+    "timeout_medium_seconds": 5,
+    "timeout_long_seconds": 15
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "profile_name": "raspberry_pi",
+  "profile_version": "1.0",
+  "description": "Perfil para Raspberry Pi 4/5 ARM64 - Edge computing",
+  
+  "environment": {
+    "type": "raspberry_pi_arm64",
+    "arch": "arm64-v8a",
+    "ram_typical_mb": 8192,
+    "ram_min_mb": 4096,
+    "storage_paths": [
+      "/home/pi/clawlite-data/",
+      "/media/usb/clawlite-data/"
+    ],
+    "python_version_min": "3.11",
+    "has_root": true,
+    "has_docker": true,
+    "has_gui_display": true,
+    "cpu_cores_typical": 4,
+    "os_version_min": "Raspberry Pi OS 11"
+  },
+  
+  "capabilities_detected": {
+    "can_compile_c": true,
+    "can_run_docker": true,
+    "can_use_gui": true,
+    "has_internet": true,
+    "has_telegram": true,
+    "max_concurrent_agents": 3,
+    "safe_timeout_seconds": 8,
+    "max_memory_mb": 500,
+    "supports_async": true,
+    "supports_sqlite": true,
+    "supports_onnx": true
+  },
+  
+  "compatible_libraries": {
+    "allowed": [
+      "requests", "beautifulsoup4", "flask", "fastapi",
+      "sqlite3", "rich", "click", "schedule", "pandas",
+      "python-telegram-bot", "httpx", "pillow",
+      "jinja2", "pydantic", "aiofiles", "python-dateutil",
+      "lxml", "urllib3", "certifi", "charset_normalizer",
+      "idna", "anyio", "sniffio", "typing_extensions",
+      "onnxruntime", "numpy", "scipy"
+    ],
+    
+    "problematic": [
+      "tensorflow (muy pesado para ARM)",
+      "pytorch (compilación compleja)"
+    ],
+    
+    "forbidden": [
+      "os.system con shell=True",
+      "subprocess.call con shell=True",
+      "eval() con input de usuario",
+      "exec() con input de usuario"
+    ]
+  },
+  
+  "performance_tuning": {
+    "swarm_max_agents": 3,
+    "model_lazy_load": true,
+    "cache_aggressive": true,
+    "battery_saver_mode": false,
+    "thermal_throttling": true,
+    "memory_optimization": "medium",
+    "cpu_affinity": "auto"
+  },
+  
+  "paths": {
+    "data_dir": "/home/pi/clawlite-data/",
+    "cache_dir": "/home/pi/clawlite-data/cache/",
+    "logs_dir": "/home/pi/clawlite-data/logs/",
+    "models_dir": "models/keep/",
+    "temp_dir": "/home/pi/clawlite-data/tmp/"
+  },
+  
+  "limits": {
+    "max_file_size_mb": 100,
+    "max_query_length": 2000,
+    "max_response_length": 20000,
+    "max_concurrent_tasks": 5,
+    "max_retries": 3,
+    "timeout_short_seconds": 3,
+    "timeout_medium_seconds": 10,
+    "timeout_long_seconds": 20
+  }
+}

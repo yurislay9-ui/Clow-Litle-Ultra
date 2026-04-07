@@ -1,0 +1,86 @@
+# Claw-Lite Ultra Pro - Dependencias para Termux ARM64
+# Lista Blanca Oficial - Verificada en termux_arm64.json
+# ACTUALIZADO: Incluye dependencias críticas para tests (95 tests recuperados)
+
+# =============================================================================
+# CORE - Siempre requeridas
+# =============================================================================
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+rich>=13.7.0
+click>=8.1.0
+
+# =============================================================================
+# HTTP/Network
+# =============================================================================
+httpx>=0.25.0
+urllib3>=2.0.0
+certifi>=2021.0.0
+
+# =============================================================================
+# Parsing/Scraping
+# =============================================================================
+lxml>=4.9.0
+soupsieve>=2.5
+
+# =============================================================================
+# Templates/Code Generation
+# =============================================================================
+jinja2>=3.1.0
+
+# =============================================================================
+# Data/Utilities
+# =============================================================================
+python-dateutil>=2.8.0
+aiofiles>=21.0.0
+pydantic>=2.5.0
+
+# =============================================================================
+# Bot/Notifications
+# =============================================================================
+python-telegram-bot>=20.7
+
+# =============================================================================
+# Imágenes (solo procesamiento, no GUI)
+# =============================================================================
+pillow>=10.0.0
+
+# =============================================================================
+# CIENTÍFICAS - CRÍTICAS PARA TESTS (18 tests dependen)
+# =============================================================================
+numpy>=1.24.0,<2.0.0  # CRÍTICO: test_semantic_engine, test_vector_store_sqlite
+scipy>=1.10.0  # Requerido por numpy para operaciones avanzadas
+
+# =============================================================================
+# TESTING - Requeridas para ejecutar tests
+# =============================================================================
+pytest>=7.1.0
+pytest-asyncio>=0.21.0  # Requerido para tests con @pytest.mark.asyncio
+psutil>=5.9.0  # Requerido para tests de monitoreo de recursos
+
+# =============================================================================
+# Database
+# =============================================================================
+# sqlite3  # Incluido en Python stdlib
+sqlite-vec>=0.1.0  # Extension para vectores en SQLite
+
+# =============================================================================
+# Opcionales (solo si hay RAM >500MB)
+# =============================================================================
+# onnxruntime>=1.16.0  # Descomentar solo en dispositivos con 6GB+ RAM
+
+# =============================================================================
+# Desarrollo (no instalar en producción)
+# =============================================================================
+# black>=21.0.0
+# flake8>=6.1.0
+# mypy>=1.7.0
+
+# =============================================================================
+# PROHIBIDO EN TERMUX (requieren GUI/Desktop)
+# =============================================================================
+# selenium - Requiere ChromeDriver y navegador GUI
+# matplotlib - Requiere backend gráfico
+# tkinter - Requiere X11/Wayland
+# opencv-python - Demasiado pesado para móvil
+# PyQt5/PyGObject - Requieren entorno gráfico

@@ -1,0 +1,144 @@
+{
+  "version": "1.0.0",
+  "intents": [
+    {
+      "name": "greet",
+      "description": "Maneja saludos simples del usuario",
+      "triggers": {
+        "keywords": ["hola", "buenos", "buenas", "hey", "que tal", "que onda"],
+        "patterns": ["^hola$", "^buen[ao]s?$", "^hey$", "^que\\s+(tal|onda)$"]
+      },
+      "handler": {
+        "type": "inline",
+        "details": {
+          "response": "¡Hola! Soy Claw-Litle 1.0 1.0. ¿En qué puedo ayudarte hoy?"
+        }
+      }
+    },
+    {
+      "name": "farewell",
+      "description": "Maneja despedidas",
+      "triggers": {
+        "keywords": ["chao", "adios", "hasta", "nos vemos", "bye"],
+        "patterns": ["^chau?$", "^adi[oó]s?$", "^hasta\\s+luego$", "^nos\\s+vemos$"]
+      },
+      "handler": {
+        "type": "inline",
+        "details": {
+          "response": "¡Hasta pronto! Recuerda que estoy aquí para ayudarte cuando me necesites."
+        }
+      }
+    },
+    {
+      "name": "help",
+      "description": "Muestra ayuda sobre comandos disponibles",
+      "triggers": {
+        "keywords": ["ayuda", "help", "comandos", "que puedes hacer", "como se usa"],
+        "patterns": ["^ayuda$", "^help$", "^comandos$", "^que\\s+puedes\\s+hacer$"]
+      },
+      "handler": {
+        "type": "inline",
+        "details": {
+          "response": "Comandos disponibles: buscar [terminino], crear [app], status, help, exit"
+        }
+      }
+    },
+    {
+      "name": "system_status",
+      "description": "Proporciona el estado operacional actual del sistema",
+      "triggers": {
+        "keywords": ["status", "estado", "sistema", "health", "salud"],
+        "patterns": ["^status$", "^estado$", "^sistema$", "^health\\s*check$"]
+      },
+      "handler": {
+        "type": "tool",
+        "details": {
+          "name": "health_checker",
+          "function": "get_system_health"
+        }
+      }
+    },
+    {
+      "name": "web_search",
+      "description": "Búsqueda web multi-agente con síntesis de resultados",
+      "triggers": {
+        "keywords": ["buscar", "busca", "search", "encuentra", "google"],
+        "patterns": ["^buscar\\s+.+", "^busca\\s+.+", "^search\\s+.+"]
+      },
+      "handler": {
+        "type": "agent",
+        "details": {
+          "agent": "swarm_manager",
+          "action": "multi_agent_search"
+        }
+      }
+    },
+    {
+      "name": "code_generation",
+      "description": "Generación de código Python con self-healing",
+      "triggers": {
+        "keywords": ["crear", "hacer", "generar", "codigo", "script", "app"],
+        "patterns": ["^crear\\s+.+", "^haz\\s+me\\s+.+", "^genera\\s+.+", "^quiero\\s+un\\s+.+"]
+      },
+      "handler": {
+        "type": "agent",
+        "details": {
+          "agent": "code_gen_engine",
+          "action": "generate_code"
+        }
+      }
+    },
+    {
+      "name": "code_repair",
+      "description": "Auto-corrección de código con self-healing engine",
+      "triggers": {
+        "keywords": ["reparar", "arreglar", "corregir", "error", "falla"],
+        "patterns": ["^repara\\s+.+", "^arregla\\s+.+", "^este\\s+codigo\\s+no\\s+funciona$"]
+      },
+      "handler": {
+        "type": "agent",
+        "details": {
+          "agent": "self_healing_engine",
+          "action": "heal_code"
+        }
+      }
+    },
+    {
+      "name": "clear_cache",
+      "description": "Limpia el caché del sistema",
+      "triggers": {
+        "keywords": ["limpiar", "cache", "borrar", "clean"],
+        "patterns": ["^limpiar$", "^limpia\\s+cache$", "^borrar\\s+cache$"]
+      },
+      "handler": {
+        "type": "tool",
+        "details": {
+          "name": "system_info",
+          "function": "clear_cache"
+        }
+      }
+    },
+    {
+      "name": "thermal_info",
+      "description": "Muestra información térmica del dispositivo",
+      "triggers": {
+        "keywords": ["temperatura", "thermal", "caliente", "cpu"],
+        "patterns": ["^temperatura$", "^thermal$", "^como\\s+esta\\s+la\\s+temp"]
+      },
+      "handler": {
+        "type": "tool",
+        "details": {
+          "name": "thermal_monitor",
+          "function": "get_temperature"
+        }
+      }
+    }
+  ],
+  "fallback": {
+    "type": "agent",
+    "details": {
+      "agent": "router",
+      "action": "intelligent_routing"
+    }
+  }
+}

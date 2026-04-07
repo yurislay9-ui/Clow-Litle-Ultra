@@ -1,0 +1,90 @@
+{
+  "profile_name": "termux_light",
+  "profile_version": "1.0",
+  "description": "Perfil ligero para dispositivos Android antiguos o con recursos limitados",
+  
+  "environment": {
+    "type": "termux_android_light",
+    "arch": "arm64-v8a",
+    "ram_typical_mb": 2048,
+    "ram_min_mb": 1024,
+    "storage_paths": [
+      "/sdcard/clawlite-data/",
+      "/data/data/com.termux/files/home/clawlite-data/"
+    ],
+    "python_version_min": "3.11",
+    "has_root": false,
+    "has_docker": false,
+    "has_gui_display": false,
+    "cpu_cores_typical": 4,
+    "android_version_min": "6.0"
+  },
+  
+  "capabilities_detected": {
+    "can_compile_c": false,
+    "can_run_docker": false,
+    "can_use_gui": false,
+    "has_internet": true,
+    "has_telegram": true,
+    "max_concurrent_agents": 1,
+    "safe_timeout_seconds": 15,
+    "max_memory_mb": 200,
+    "supports_async": true,
+    "supports_sqlite": true,
+    "supports_onnx": false
+  },
+  
+  "compatible_libraries": {
+    "allowed": [
+      "requests", "beautifulsoup4",
+      "sqlite3", "rich", "click",
+      "python-telegram-bot", "httpx",
+      "jinja2", "pydantic", "aiofiles",
+      "lxml", "urllib3", "certifi"
+    ],
+    
+    "problematic": [
+      "pandas (muy pesado para 1GB RAM)",
+      "onnxruntime (no soportado en este perfil)",
+      "tkinter (no display server)",
+      "matplotlib (solo modo GUI)"
+    ],
+    
+    "forbidden": [
+      "os.system con shell=True",
+      "subprocess.call con shell=True",
+      "eval() con input de usuario",
+      "exec() con input de usuario"
+    ]
+  },
+  
+  "performance_tuning": {
+    "swarm_max_agents": 1,
+    "model_lazy_load": true,
+    "cache_aggressive": true,
+    "battery_saver_mode": true,
+    "thermal_throttling": true,
+    "memory_optimization": "extreme",
+    "cpu_affinity": "auto",
+    "disable_semantic_search": true
+  },
+  
+  "paths": {
+    "data_dir": "/sdcard/clawlite-data/",
+    "cache_dir": "/sdcard/clawlite-data/cache/",
+    "logs_dir": "/sdcard/clawlite-data/logs/",
+    "models_dir": "models/keep/",
+    "temp_dir": "/sdcard/clawlite-data/tmp/"
+  },
+  
+  "limits": {
+    "max_file_size_mb": 25,
+    "max_query_length": 500,
+    "max_response_length": 5000,
+    "max_concurrent_tasks": 1,
+    "max_retries": 2,
+    "timeout_short_seconds": 8,
+    "timeout_medium_seconds": 20,
+    "timeout_long_seconds": 45
+  }
+}

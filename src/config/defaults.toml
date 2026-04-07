@@ -1,0 +1,93 @@
+# Claw-Litle 1.0 - Default Configuration
+# Mobile-First Hardened Configuration
+
+[intents]
+registry_path = "src/config/intents_registry.json"
+
+[logging]
+level = "INFO"
+format = "%(asctime)s - [%(levelname)s] - %(name)s: %(message)s"
+file_path = "logs/claw-litle.log"
+rotation_days = 7
+
+[channels.terminal]
+user_prompt = "[USER]: "
+assistant_prompt = "[CLAW]: "
+welcome_message = """
+╔══════════════════════════════════════════════════════════╗
+║                                                          ║
+║   ███████╗███████╗ ██████╗ ██╗  ██╗███████╗             ║
+║   ██╔════╝╚══██╔══╝██╔═══██╗██║  ██║██╔════╝             ║
+║   ███████╗   ██║   ██║   ██║███████║█████╗               ║
+║   ╚════██║   ██║   ██║   ██║╚════██║╚════╝               ║
+║   ███████║   ██║   ╚██████╔╝     ██║                     ║
+║   ╚══════╝   ╚═╝    ╚═════╝      ╚═╝                     ║
+║                                                          ║
+║              C L A W - L I T L E   1 . 0                 ║
+║                                                          ║
+║   Personal Agentic Operating System                      ║
+║   100% LOCAL/OFFLINE - Optimized for Termux ARM64        ║
+║                                                          ║
+╚══════════════════════════════════════════════════════════╝
+
+Type 'help' to see available commands.
+Type 'exit' to quit.
+"""
+
+[channels.telegram]
+token_env = "TELEGRAM_TOKEN"
+polling_timeout = 30
+allow_groups = false
+
+[engine]
+max_concurrent_agents = 2
+search_timeout = 30
+cache_ttl = 86400
+short_circuit_threshold = 0.95
+
+[hybrid_engine]
+regex_enabled = true
+fuzzy_enabled = true
+fuzzy_threshold = 0.85
+semantic_enabled = true
+semantic_threshold = 0.89
+semantic_model_path = "models/all-MiniLM-L6-v2.onnx"
+expert_rules_enabled = true
+
+[thermal_guard]
+max_temp_normal = 70
+critical_temp = 85
+monitor_interval = 5
+
+[rate_limiting]
+free_limit = 30
+pro_limit = 1000
+window_seconds = 3600
+
+[sandbox]
+timeout = 10
+memory_limit = 256
+max_healing_iterations = 3
+
+[persistence]
+database_path = "data/clawlitle.db"
+wal_mode = true
+encryption_enabled = true
+
+[security]
+allowed_imports = [
+    "requests", "beautifulsoup4", "flask", "fastapi",
+    "sqlite3", "rich", "click", "schedule", "pandas",
+    "python-telegram-bot", "httpx", "pillow",
+    "jinja2", "pydantic", "aiofiles", "datetime",
+    "json", "re", "os", "sys", "math", "random",
+    "logging", "asyncio", "threading", "time"
+]
+forbidden_patterns = [
+    "os\\.system\\(",
+    "subprocess\\..*shell\\s*=\\s*True",
+    "eval\\(",
+    "exec\\(",
+    "__import__\\(",
+    "compile\\("
+]

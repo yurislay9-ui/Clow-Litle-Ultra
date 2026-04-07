@@ -1,0 +1,3 @@
+[console_scripts]
+claw = claw_litle.__main__:main
+claw-doctor = claw_litle.doctor:main

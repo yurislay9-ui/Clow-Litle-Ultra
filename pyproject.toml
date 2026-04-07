@@ -1,0 +1,100 @@
+[build-system]
+requires = ["setuptools>=68.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "claw-litle"
+version = "1.0.0"
+description = "Claw-Litle 1.0 - Personal Agentic Operating System"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.11"
+authors = [
+    {name = "Claw-Litle Team", email = "dev@clawlitle.dev"}
+]
+keywords = [
+    "termux", "android", "arm64", "ai", "agent", "local", 
+    "offline", "python", "cli", "automation", "code-generation"
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Environment :: Plugins",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: Android",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+dependencies = [
+    "requests>=2.31.0",
+    "beautifulsoup4>=4.12.0",
+    "rich>=13.7.0",
+    "click>=8.1.0",
+    "httpx>=0.25.0",
+    "jinja2>=3.1.0",
+    "pydantic>=2.5.0",
+    "python-dateutil>=2.8.0",
+    "aiofiles>=21.0.0",
+    "python-telegram-bot>=20.7",
+    "pillow>=10.0.0",
+    "lxml>=4.9.0",
+]
+
+[project.optional-dependencies]
+semantic = [
+    "onnxruntime>=1.16.0",
+    "numpy>=1.21.0",
+]
+dev = [
+    "pytest>=7.1.0",
+    "pytest-asyncio>=0.21.0",
+    "black>=21.0.0",
+    "flake8>=6.1.0",
+    "mypy>=1.7.0",
+    "psutil>=5.9.0",
+]
+
+[project.scripts]
+claw = "claw_litle.__main__:main"
+claw-doctor = "claw_litle.doctor:main"
+
+[project.urls]
+Homepage = "https://github.com/yurislay9-ui/Claw-Litle"
+Documentation = "https://github.com/yurislay9-ui/Claw-Litle/tree/main/docs"
+Repository = "https://github.com/yurislay9-ui/Claw-Litle"
+Issues = "https://github.com/yurislay9-ui/Claw-Litle/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["claw_litle*"]
+
+[tool.setuptools.package-data]
+claw_litle = [
+    "config/*.toml",
+    "config/*.json",
+    "config/templates/python/*.template",
+    "config/templates/self_healing_fixes/*.json",
+    "config/environment_profiles/*.json",
+]
+
+[tool.black]
+line-length = 100
+target-version = ['py311', 'py312']
+include = '\.pyi?$'
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+python_functions = "test_*"
+addopts = "-v --tb=short"
